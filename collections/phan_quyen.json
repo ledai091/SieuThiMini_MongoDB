@@ -1,0 +1,20 @@
+{
+    "_id" : ObjectId("6740ced4831c8722df4e6679"),
+    "ma_quyen" : NumberInt(0),
+    "ten_quyen" : "admin"
+}
+{
+    "_id" : ObjectId("6740ced4831c8722df4e667a"),
+    "ma_quyen" : NumberInt(1),
+    "ten_quyen" : "quan ly"
+}
+{
+    "_id" : ObjectId("6740ced4831c8722df4e667b"),
+    "ma_quyen" : NumberInt(2),
+    "ten_quyen" : "nhan vien"
+}
+{
+    "_id" : ObjectId("6740ced4831c8722df4e667c"),
+    "ma_quyen" : NumberInt(3),
+    "ten_quyen" : "none"
+}

@@ -1,0 +1,32 @@
+{
+    "_id" : ObjectId("6740cd57831c8722df4e65d3"),
+    "ma_hoa_don" : NumberInt(1),
+    "ngay_xuat" : ISODate("2023-10-15T00:00:00.000+0000"),
+    "ma_nhan_vien" : NumberInt(2),
+    "tong_tien" : NumberInt(30000),
+    "trang_thai" : NumberInt(1)
+}
+{
+    "_id" : ObjectId("6740cd57831c8722df4e65d4"),
+    "ma_hoa_don" : NumberInt(6),
+    "ngay_xuat" : ISODate("2023-11-14T00:00:00.000+0000"),
+    "ma_nhan_vien" : NumberInt(2),
+    "tong_tien" : NumberInt(47000),
+    "trang_thai" : NumberInt(1)
+}
+{
+    "_id" : ObjectId("6740cd57831c8722df4e65d5"),
+    "ma_hoa_don" : NumberInt(7),
+    "ngay_xuat" : ISODate("2023-11-21T00:00:00.000+0000"),
+    "ma_nhan_vien" : NumberInt(2),
+    "tong_tien" : NumberInt(42000),
+    "trang_thai" : NumberInt(1)
+}
+{
+    "_id" : ObjectId("6740cd57831c8722df4e65d6"),
+    "ma_hoa_don" : NumberInt(8),
+    "ngay_xuat" : ISODate("2023-11-22T00:00:00.000+0000"),
+    "ma_nhan_vien" : NumberInt(2),
+    "tong_tien" : NumberInt(19000),
+    "trang_thai" : NumberInt(1)
+}

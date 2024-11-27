@@ -1,0 +1,117 @@
+{
+    "_id" : ObjectId("6740cc81831c8722df4e6596"),
+    "ma_hoa_don" : NumberInt(1),
+    "ma_san_pham" : NumberInt(1),
+    "ten_san_pham" : "Mì gói 3 miền",
+    "so_luong" : NumberInt(2),
+    "gia_san_pham" : NumberInt(5000),
+    "thanh_tien" : NumberInt(10000)
+}
+{
+    "_id" : ObjectId("6740cc81831c8722df4e6597"),
+    "ma_hoa_don" : NumberInt(1),
+    "ma_san_pham" : NumberInt(2),
+    "ten_san_pham" : "Pepsi",
+    "so_luong" : NumberInt(2),
+    "gia_san_pham" : NumberInt(10000),
+    "thanh_tien" : NumberInt(20000)
+}
+{
+    "_id" : ObjectId("6740cc81831c8722df4e6598"),
+    "ma_hoa_don" : NumberInt(6),
+    "ma_san_pham" : NumberInt(1),
+    "ten_san_pham" : "Mì gói 3 miền",
+    "so_luong" : NumberInt(1),
+    "gia_san_pham" : NumberInt(5000),
+    "thanh_tien" : NumberInt(5000)
+}
+{
+    "_id" : ObjectId("6740cc81831c8722df4e6599"),
+    "ma_hoa_don" : NumberInt(6),
+    "ma_san_pham" : NumberInt(3),
+    "ten_san_pham" : "Phở gói Đệ Nhất",
+    "so_luong" : NumberInt(1),
+    "gia_san_pham" : NumberInt(8000),
+    "thanh_tien" : NumberInt(8000)
+}
+{
+    "_id" : ObjectId("6740cc81831c8722df4e659a"),
+    "ma_hoa_don" : NumberInt(6),
+    "ma_san_pham" : NumberInt(6),
+    "ten_san_pham" : "Giấy cuộn",
+    "so_luong" : NumberInt(1),
+    "gia_san_pham" : NumberInt(4000),
+    "thanh_tien" : NumberInt(4000)
+}
+{
+    "_id" : ObjectId("6740cc81831c8722df4e659b"),
+    "ma_hoa_don" : NumberInt(6),
+    "ma_san_pham" : NumberInt(9),
+    "ten_san_pham" : "Coca cola",
+    "so_luong" : NumberInt(1),
+    "gia_san_pham" : NumberInt(10000),
+    "thanh_tien" : NumberInt(10000)
+}
+{
+    "_id" : ObjectId("6740cc81831c8722df4e659c"),
+    "ma_hoa_don" : NumberInt(6),
+    "ma_san_pham" : NumberInt(10),
+    "ten_san_pham" : "7Up",
+    "so_luong" : NumberInt(2),
+    "gia_san_pham" : NumberInt(10000),
+    "thanh_tien" : NumberInt(20000)
+}
+{
+    "_id" : ObjectId("6740cc81831c8722df4e659d"),
+    "ma_hoa_don" : NumberInt(7),
+    "ma_san_pham" : NumberInt(2),
+    "ten_san_pham" : "Pepsi",
+    "so_luong" : NumberInt(1),
+    "gia_san_pham" : NumberInt(10000),
+    "thanh_tien" : NumberInt(10000)
+}
+{
+    "_id" : ObjectId("6740cc81831c8722df4e659e"),
+    "ma_hoa_don" : NumberInt(7),
+    "ma_san_pham" : NumberInt(6),
+    "ten_san_pham" : "Giấy cuộn",
+    "so_luong" : NumberInt(1),
+    "gia_san_pham" : NumberInt(4000),
+    "thanh_tien" : NumberInt(4000)
+}
+{
+    "_id" : ObjectId("6740cc81831c8722df4e659f"),
+    "ma_hoa_don" : NumberInt(7),
+    "ma_san_pham" : NumberInt(8),
+    "ten_san_pham" : "Kem đánh răng PS",
+    "so_luong" : NumberInt(1),
+    "gia_san_pham" : NumberInt(28000),
+    "thanh_tien" : NumberInt(28000)
+}
+{
+    "_id" : ObjectId("6740cc81831c8722df4e65a0"),
+    "ma_hoa_don" : NumberInt(8),
+    "ma_san_pham" : NumberInt(1),
+    "ten_san_pham" : "Mì gói 3 miền",
+    "so_luong" : NumberInt(1),
+    "gia_san_pham" : NumberInt(5000),
+    "thanh_tien" : NumberInt(5000)
+}
+{
+    "_id" : ObjectId("6740cc81831c8722df4e65a1"),
+    "ma_hoa_don" : NumberInt(8),
+    "ma_san_pham" : NumberInt(6),
+    "ten_san_pham" : "Giấy cuộn",
+    "so_luong" : NumberInt(1),
+    "gia_san_pham" : NumberInt(4000),
+    "thanh_tien" : NumberInt(4000)
+}
+{
+    "_id" : ObjectId("6740cc81831c8722df4e65a2"),
+    "ma_hoa_don" : NumberInt(8),
+    "ma_san_pham" : NumberInt(9),
+    "ten_san_pham" : "Coca cola",
+    "so_luong" : NumberInt(1),
+    "gia_san_pham" : NumberInt(10000),
+    "thanh_tien" : NumberInt(10000)
+}

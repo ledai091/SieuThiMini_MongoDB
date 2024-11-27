@@ -1,0 +1,730 @@
+{
+    "_id" : ObjectId("6740ced4831c8722df4e667d"),
+    "ma_san_pham" : NumberInt(1),
+    "ten_san_pham" : "Mì gói 3 miền",
+    "so_luong" : NumberInt(196),
+    "gia" : NumberInt(5000),
+    "gia_nhap" : NumberInt(2000),
+    "ma_loai" : NumberInt(1),
+    "trang_thai" : NumberInt(1)
+}
+{
+    "_id" : ObjectId("6740ced4831c8722df4e667e"),
+    "ma_san_pham" : NumberInt(2),
+    "ten_san_pham" : "Pepsi",
+    "so_luong" : NumberInt(147),
+    "gia" : NumberInt(10000),
+    "gia_nhap" : NumberInt(5000),
+    "ma_loai" : NumberInt(2),
+    "trang_thai" : NumberInt(1)
+}
+{
+    "_id" : ObjectId("6740ced4831c8722df4e667f"),
+    "ma_san_pham" : NumberInt(3),
+    "ten_san_pham" : "Phở gói Đệ Nhất",
+    "so_luong" : NumberInt(99),
+    "gia" : NumberInt(8000),
+    "gia_nhap" : NumberInt(3000),
+    "ma_loai" : NumberInt(1),
+    "trang_thai" : NumberInt(1)
+}
+{
+    "_id" : ObjectId("6740ced4831c8722df4e6680"),
+    "ma_san_pham" : NumberInt(4),
+    "ten_san_pham" : "Kem đánh răng Colgate",
+    "so_luong" : NumberInt(50),
+    "gia" : NumberInt(25000),
+    "gia_nhap" : NumberInt(10000),
+    "ma_loai" : NumberInt(3),
+    "trang_thai" : NumberInt(1)
+}
+{
+    "_id" : ObjectId("6740ced4831c8722df4e6681"),
+    "ma_san_pham" : NumberInt(5),
+    "ten_san_pham" : "Khăn giấy bịch nhỏ",
+    "so_luong" : NumberInt(200),
+    "gia" : NumberInt(3000),
+    "gia_nhap" : NumberInt(1000),
+    "ma_loai" : NumberInt(4),
+    "trang_thai" : NumberInt(1)
+}
+{
+    "_id" : ObjectId("6740ced4831c8722df4e6682"),
+    "ma_san_pham" : NumberInt(6),
+    "ten_san_pham" : "Giấy cuộn",
+    "so_luong" : NumberInt(197),
+    "gia" : NumberInt(4000),
+    "gia_nhap" : NumberInt(2000),
+    "ma_loai" : NumberInt(4),
+    "trang_thai" : NumberInt(1)
+}
+{
+    "_id" : ObjectId("6740ced4831c8722df4e6683"),
+    "ma_san_pham" : NumberInt(7),
+    "ten_san_pham" : "Kem đánh răng Sensitive",
+    "so_luong" : NumberInt(50),
+    "gia" : NumberInt(30000),
+    "gia_nhap" : NumberInt(15000),
+    "ma_loai" : NumberInt(3),
+    "trang_thai" : NumberInt(1)
+}
+{
+    "_id" : ObjectId("6740ced4831c8722df4e6684"),
+    "ma_san_pham" : NumberInt(8),
+    "ten_san_pham" : "Kem đánh răng PS",
+    "so_luong" : NumberInt(49),
+    "gia" : NumberInt(28000),
+    "gia_nhap" : NumberInt(12000),
+    "ma_loai" : NumberInt(3),
+    "trang_thai" : NumberInt(1)
+}
+{
+    "_id" : ObjectId("6740ced4831c8722df4e6685"),
+    "ma_san_pham" : NumberInt(9),
+    "ten_san_pham" : "Coca cola",
+    "so_luong" : NumberInt(198),
+    "gia" : NumberInt(10000),
+    "gia_nhap" : NumberInt(5000),
+    "ma_loai" : NumberInt(2),
+    "trang_thai" : NumberInt(1)
+}
+{
+    "_id" : ObjectId("6740ced4831c8722df4e6686"),
+    "ma_san_pham" : NumberInt(10),
+    "ten_san_pham" : "7Up",
+    "so_luong" : NumberInt(198),
+    "gia" : NumberInt(10000),
+    "gia_nhap" : NumberInt(5000),
+    "ma_loai" : NumberInt(2),
+    "trang_thai" : NumberInt(1)
+}
+{
+    "_id" : ObjectId("6740ced4831c8722df4e6687"),
+    "ma_san_pham" : NumberInt(11),
+    "ten_san_pham" : "Mì trộn Kool",
+    "so_luong" : NumberInt(100),
+    "gia" : NumberInt(7000),
+    "gia_nhap" : NumberInt(3500),
+    "ma_loai" : NumberInt(1),
+    "trang_thai" : NumberInt(1)
+}
+{
+    "_id" : ObjectId("6740ced4831c8722df4e6688"),
+    "ma_san_pham" : NumberInt(12),
+    "ten_san_pham" : "Hủ tiếu nam vang gói",
+    "so_luong" : NumberInt(150),
+    "gia" : NumberInt(8000),
+    "gia_nhap" : NumberInt(3500),
+    "ma_loai" : NumberInt(1),
+    "trang_thai" : NumberInt(1)
+}
+{
+    "_id" : ObjectId("6740ced4831c8722df4e6689"),
+    "ma_san_pham" : NumberInt(13),
+    "ten_san_pham" : "Xà bông Lifebouy",
+    "so_luong" : NumberInt(50),
+    "gia" : NumberInt(12000),
+    "gia_nhap" : NumberInt(5000),
+    "ma_loai" : NumberInt(5),
+    "trang_thai" : NumberInt(1)
+}
+{
+    "_id" : ObjectId("6740ced4831c8722df4e668a"),
+    "ma_san_pham" : NumberInt(14),
+    "ten_san_pham" : "Xà bông Coast",
+    "so_luong" : NumberInt(50),
+    "gia" : NumberInt(11000),
+    "gia_nhap" : NumberInt(5000),
+    "ma_loai" : NumberInt(5),
+    "trang_thai" : NumberInt(1)
+}
+{
+    "_id" : ObjectId("6740ced4831c8722df4e668b"),
+    "ma_san_pham" : NumberInt(15),
+    "ten_san_pham" : "Xà bông Safeguard",
+    "so_luong" : NumberInt(50),
+    "gia" : NumberInt(10000),
+    "gia_nhap" : NumberInt(5000),
+    "ma_loai" : NumberInt(5),
+    "trang_thai" : NumberInt(1)
+}
+{
+    "_id" : ObjectId("6740ced4831c8722df4e668c"),
+    "ma_san_pham" : NumberInt(16),
+    "ten_san_pham" : "Xà bông Camay",
+    "so_luong" : NumberInt(50),
+    "gia" : NumberInt(15000),
+    "gia_nhap" : NumberInt(6000),
+    "ma_loai" : NumberInt(5),
+    "trang_thai" : NumberInt(1)
+}
+{
+    "_id" : ObjectId("6740ced4831c8722df4e668d"),
+    "ma_san_pham" : NumberInt(17),
+    "ten_san_pham" : "Dầu gội đầu Clear",
+    "so_luong" : NumberInt(80),
+    "gia" : NumberInt(90000),
+    "gia_nhap" : NumberInt(45000),
+    "ma_loai" : NumberInt(5),
+    "trang_thai" : NumberInt(1)
+}
+{
+    "_id" : ObjectId("6740ced4831c8722df4e668e"),
+    "ma_san_pham" : NumberInt(18),
+    "ten_san_pham" : "Dầu gội đầu Clear Men",
+    "so_luong" : NumberInt(80),
+    "gia" : NumberInt(90000),
+    "gia_nhap" : NumberInt(45000),
+    "ma_loai" : NumberInt(5),
+    "trang_thai" : NumberInt(1)
+}
+{
+    "_id" : ObjectId("6740ced4831c8722df4e668f"),
+    "ma_san_pham" : NumberInt(19),
+    "ten_san_pham" : "Dầu gội đầu Sunsilk",
+    "so_luong" : NumberInt(80),
+    "gia" : NumberInt(80000),
+    "gia_nhap" : NumberInt(40000),
+    "ma_loai" : NumberInt(5),
+    "trang_thai" : NumberInt(1)
+}
+{
+    "_id" : ObjectId("6740ced4831c8722df4e6690"),
+    "ma_san_pham" : NumberInt(20),
+    "ten_san_pham" : "Dầu gội đầu Dove",
+    "so_luong" : NumberInt(80),
+    "gia" : NumberInt(100000),
+    "gia_nhap" : NumberInt(50000),
+    "ma_loai" : NumberInt(5),
+    "trang_thai" : NumberInt(1)
+}
+{
+    "_id" : ObjectId("6740ced4831c8722df4e6691"),
+    "ma_san_pham" : NumberInt(21),
+    "ten_san_pham" : "Dầu gội đầu Xmen",
+    "so_luong" : NumberInt(80),
+    "gia" : NumberInt(90000),
+    "gia_nhap" : NumberInt(45000),
+    "ma_loai" : NumberInt(5),
+    "trang_thai" : NumberInt(1)
+}
+{
+    "_id" : ObjectId("6740ced4831c8722df4e6692"),
+    "ma_san_pham" : NumberInt(22),
+    "ten_san_pham" : "Dầu gội đầu Selsun",
+    "so_luong" : NumberInt(80),
+    "gia" : NumberInt(70000),
+    "gia_nhap" : NumberInt(30000),
+    "ma_loai" : NumberInt(5),
+    "trang_thai" : NumberInt(1)
+}
+{
+    "_id" : ObjectId("6740ced4831c8722df4e6693"),
+    "ma_san_pham" : NumberInt(23),
+    "ten_san_pham" : "Bánh bao trứng cút bịch 4 cái",
+    "so_luong" : NumberInt(40),
+    "gia" : NumberInt(25000),
+    "gia_nhap" : NumberInt(12000),
+    "ma_loai" : NumberInt(7),
+    "trang_thai" : NumberInt(1)
+}
+{
+    "_id" : ObjectId("6740ced4831c8722df4e6694"),
+    "ma_san_pham" : NumberInt(24),
+    "ten_san_pham" : "Bánh bao trứng muối bịch 4 cái",
+    "so_luong" : NumberInt(40),
+    "gia" : NumberInt(30000),
+    "gia_nhap" : NumberInt(15000),
+    "ma_loai" : NumberInt(7),
+    "trang_thai" : NumberInt(1)
+}
+{
+    "_id" : ObjectId("6740ced4831c8722df4e6695"),
+    "ma_san_pham" : NumberInt(25),
+    "ten_san_pham" : "Bánh bao xá xíu bịch 4 cái",
+    "so_luong" : NumberInt(40),
+    "gia" : NumberInt(30000),
+    "gia_nhap" : NumberInt(15000),
+    "ma_loai" : NumberInt(7),
+    "trang_thai" : NumberInt(1)
+}
+{
+    "_id" : ObjectId("6740ced4831c8722df4e6696"),
+    "ma_san_pham" : NumberInt(26),
+    "ten_san_pham" : "Bánh bao cải muối bịch 4 cái",
+    "so_luong" : NumberInt(40),
+    "gia" : NumberInt(20000),
+    "gia_nhap" : NumberInt(10000),
+    "ma_loai" : NumberInt(7),
+    "trang_thai" : NumberInt(1)
+}
+{
+    "_id" : ObjectId("6740ced4831c8722df4e6697"),
+    "ma_san_pham" : NumberInt(27),
+    "ten_san_pham" : "Bánh Oishi Indo Chips vị tôm",
+    "so_luong" : NumberInt(100),
+    "gia" : NumberInt(7000),
+    "gia_nhap" : NumberInt(3500),
+    "ma_loai" : NumberInt(6),
+    "trang_thai" : NumberInt(1)
+}
+{
+    "_id" : ObjectId("6740ced4831c8722df4e6698"),
+    "ma_san_pham" : NumberInt(28),
+    "ten_san_pham" : "Bánh Oishi Indo Chips vị mực",
+    "so_luong" : NumberInt(100),
+    "gia" : NumberInt(8000),
+    "gia_nhap" : NumberInt(3500),
+    "ma_loai" : NumberInt(6),
+    "trang_thai" : NumberInt(1)
+}
+{
+    "_id" : ObjectId("6740ced4831c8722df4e6699"),
+    "ma_san_pham" : NumberInt(29),
+    "ten_san_pham" : "Bánh Oishi Indo Chips vị tôm siêu cay",
+    "so_luong" : NumberInt(100),
+    "gia" : NumberInt(8000),
+    "gia_nhap" : NumberInt(3500),
+    "ma_loai" : NumberInt(6),
+    "trang_thai" : NumberInt(1)
+}
+{
+    "_id" : ObjectId("6740ced4831c8722df4e669a"),
+    "ma_san_pham" : NumberInt(30),
+    "ten_san_pham" : "Bánh Ostar vị khoai tây",
+    "so_luong" : NumberInt(100),
+    "gia" : NumberInt(10000),
+    "gia_nhap" : NumberInt(5000),
+    "ma_loai" : NumberInt(6),
+    "trang_thai" : NumberInt(1)
+}
+{
+    "_id" : ObjectId("6740ced4831c8722df4e669b"),
+    "ma_san_pham" : NumberInt(31),
+    "ten_san_pham" : "Bánh Ostar vị rong biển",
+    "so_luong" : NumberInt(100),
+    "gia" : NumberInt(12000),
+    "gia_nhap" : NumberInt(5000),
+    "ma_loai" : NumberInt(6),
+    "trang_thai" : NumberInt(1)
+}
+{
+    "_id" : ObjectId("6740ced4831c8722df4e669c"),
+    "ma_san_pham" : NumberInt(32),
+    "ten_san_pham" : "Bánh Ostar vị bò BBQ",
+    "so_luong" : NumberInt(100),
+    "gia" : NumberInt(12000),
+    "gia_nhap" : NumberInt(5000),
+    "ma_loai" : NumberInt(6),
+    "trang_thai" : NumberInt(1)
+}
+{
+    "_id" : ObjectId("6740ced4831c8722df4e669d"),
+    "ma_san_pham" : NumberInt(33),
+    "ten_san_pham" : "Bánh Toonies vị phô mai",
+    "so_luong" : NumberInt(80),
+    "gia" : NumberInt(12000),
+    "gia_nhap" : NumberInt(6000),
+    "ma_loai" : NumberInt(6),
+    "trang_thai" : NumberInt(1)
+}
+{
+    "_id" : ObjectId("6740ced4831c8722df4e669e"),
+    "ma_san_pham" : NumberInt(34),
+    "ten_san_pham" : "Bánh Toonies vị cay",
+    "so_luong" : NumberInt(80),
+    "gia" : NumberInt(12000),
+    "gia_nhap" : NumberInt(6000),
+    "ma_loai" : NumberInt(6),
+    "trang_thai" : NumberInt(1)
+}
+{
+    "_id" : ObjectId("6740ced4831c8722df4e669f"),
+    "ma_san_pham" : NumberInt(35),
+    "ten_san_pham" : "Bánh Toonies vị gà",
+    "so_luong" : NumberInt(80),
+    "gia" : NumberInt(12000),
+    "gia_nhap" : NumberInt(6000),
+    "ma_loai" : NumberInt(6),
+    "trang_thai" : NumberInt(1)
+}
+{
+    "_id" : ObjectId("6740ced4831c8722df4e66a0"),
+    "ma_san_pham" : NumberInt(36),
+    "ten_san_pham" : "Bánh Toonies vị Chocolate",
+    "so_luong" : NumberInt(80),
+    "gia" : NumberInt(12000),
+    "gia_nhap" : NumberInt(6000),
+    "ma_loai" : NumberInt(6),
+    "trang_thai" : NumberInt(1)
+}
+{
+    "_id" : ObjectId("6740ced4831c8722df4e66a1"),
+    "ma_san_pham" : NumberInt(37),
+    "ten_san_pham" : "Lốc 10 bịch khăn giấy nhỏ",
+    "so_luong" : NumberInt(50),
+    "gia" : NumberInt(20000),
+    "gia_nhap" : NumberInt(10000),
+    "ma_loai" : NumberInt(4),
+    "trang_thai" : NumberInt(1)
+}
+{
+    "_id" : ObjectId("6740ced4831c8722df4e66a2"),
+    "ma_san_pham" : NumberInt(38),
+    "ten_san_pham" : "Lốc 10 cuộn giấy",
+    "so_luong" : NumberInt(50),
+    "gia" : NumberInt(28000),
+    "gia_nhap" : NumberInt(12000),
+    "ma_loai" : NumberInt(4),
+    "trang_thai" : NumberInt(1)
+}
+{
+    "_id" : ObjectId("6740ced4831c8722df4e66a3"),
+    "ma_san_pham" : NumberInt(39),
+    "ten_san_pham" : "Fanta nước cam",
+    "so_luong" : NumberInt(100),
+    "gia" : NumberInt(10000),
+    "gia_nhap" : NumberInt(5000),
+    "ma_loai" : NumberInt(2),
+    "trang_thai" : NumberInt(1)
+}
+{
+    "_id" : ObjectId("6740ced4831c8722df4e66a4"),
+    "ma_san_pham" : NumberInt(40),
+    "ten_san_pham" : "Fanta Soda kem",
+    "so_luong" : NumberInt(100),
+    "gia" : NumberInt(10000),
+    "gia_nhap" : NumberInt(5000),
+    "ma_loai" : NumberInt(2),
+    "trang_thai" : NumberInt(1)
+}
+{
+    "_id" : ObjectId("6740ced4831c8722df4e66a5"),
+    "ma_san_pham" : NumberInt(41),
+    "ten_san_pham" : "Fanta việt quất",
+    "so_luong" : NumberInt(100),
+    "gia" : NumberInt(10000),
+    "gia_nhap" : NumberInt(5000),
+    "ma_loai" : NumberInt(2),
+    "trang_thai" : NumberInt(1)
+}
+{
+    "_id" : ObjectId("6740ced4831c8722df4e66a6"),
+    "ma_san_pham" : NumberInt(42),
+    "ten_san_pham" : "Fanta nho",
+    "so_luong" : NumberInt(100),
+    "gia" : NumberInt(10000),
+    "gia_nhap" : NumberInt(5000),
+    "ma_loai" : NumberInt(2),
+    "trang_thai" : NumberInt(1)
+}
+{
+    "_id" : ObjectId("6740ced4831c8722df4e66a7"),
+    "ma_san_pham" : NumberInt(43),
+    "ten_san_pham" : "Fanta dâu tây",
+    "so_luong" : NumberInt(100),
+    "gia" : NumberInt(10000),
+    "gia_nhap" : NumberInt(5000),
+    "ma_loai" : NumberInt(2),
+    "trang_thai" : NumberInt(1)
+}
+{
+    "_id" : ObjectId("6740ced4831c8722df4e66a8"),
+    "ma_san_pham" : NumberInt(44),
+    "ten_san_pham" : "Nước điện giải Revive",
+    "so_luong" : NumberInt(70),
+    "gia" : NumberInt(10000),
+    "gia_nhap" : NumberInt(4000),
+    "ma_loai" : NumberInt(2),
+    "trang_thai" : NumberInt(1)
+}
+{
+    "_id" : ObjectId("6740ced4831c8722df4e66a9"),
+    "ma_san_pham" : NumberInt(45),
+    "ten_san_pham" : "Nước điện giải Revive chanh muối",
+    "so_luong" : NumberInt(70),
+    "gia" : NumberInt(12000),
+    "gia_nhap" : NumberInt(4000),
+    "ma_loai" : NumberInt(2),
+    "trang_thai" : NumberInt(1)
+}
+{
+    "_id" : ObjectId("6740ced4831c8722df4e66aa"),
+    "ma_san_pham" : NumberInt(46),
+    "ten_san_pham" : "Nước điện giải Pocari Sweat",
+    "so_luong" : NumberInt(70),
+    "gia" : NumberInt(6000),
+    "gia_nhap" : NumberInt(2000),
+    "ma_loai" : NumberInt(2),
+    "trang_thai" : NumberInt(1)
+}
+{
+    "_id" : ObjectId("6740ced4831c8722df4e66ab"),
+    "ma_san_pham" : NumberInt(47),
+    "ten_san_pham" : "Nước điện giải Aquarius",
+    "so_luong" : NumberInt(70),
+    "gia" : NumberInt(6000),
+    "gia_nhap" : NumberInt(2000),
+    "ma_loai" : NumberInt(2),
+    "trang_thai" : NumberInt(1)
+}
+{
+    "_id" : ObjectId("6740ced4831c8722df4e66ac"),
+    "ma_san_pham" : NumberInt(48),
+    "ten_san_pham" : "Nước điện giải Gatorade",
+    "so_luong" : NumberInt(70),
+    "gia" : NumberInt(10000),
+    "gia_nhap" : NumberInt(5000),
+    "ma_loai" : NumberInt(2),
+    "trang_thai" : NumberInt(1)
+}
+{
+    "_id" : ObjectId("6740ced4831c8722df4e66ad"),
+    "ma_san_pham" : NumberInt(49),
+    "ten_san_pham" : "Sữa hộp 1L TH True Milk có đường",
+    "so_luong" : NumberInt(50),
+    "gia" : NumberInt(50000),
+    "gia_nhap" : NumberInt(25000),
+    "ma_loai" : NumberInt(8),
+    "trang_thai" : NumberInt(1)
+}
+{
+    "_id" : ObjectId("6740ced4831c8722df4e66ae"),
+    "ma_san_pham" : NumberInt(50),
+    "ten_san_pham" : "Sữa hộp 1L TH True Milk ít đường",
+    "so_luong" : NumberInt(50),
+    "gia" : NumberInt(50000),
+    "gia_nhap" : NumberInt(25000),
+    "ma_loai" : NumberInt(8),
+    "trang_thai" : NumberInt(1)
+}
+{
+    "_id" : ObjectId("6740ced4831c8722df4e66af"),
+    "ma_san_pham" : NumberInt(51),
+    "ten_san_pham" : "Sữa hộp 1L Fami có đường",
+    "so_luong" : NumberInt(50),
+    "gia" : NumberInt(25000),
+    "gia_nhap" : NumberInt(10000),
+    "ma_loai" : NumberInt(8),
+    "trang_thai" : NumberInt(1)
+}
+{
+    "_id" : ObjectId("6740ced4831c8722df4e66b0"),
+    "ma_san_pham" : NumberInt(52),
+    "ten_san_pham" : "Sữa hộp 1L Fami ít đường",
+    "so_luong" : NumberInt(50),
+    "gia" : NumberInt(25000),
+    "gia_nhap" : NumberInt(10000),
+    "ma_loai" : NumberInt(8),
+    "trang_thai" : NumberInt(1)
+}
+{
+    "_id" : ObjectId("6740ced4831c8722df4e66b1"),
+    "ma_san_pham" : NumberInt(53),
+    "ten_san_pham" : "Sữa hộp 1L Promess nguyên kem",
+    "so_luong" : NumberInt(50),
+    "gia" : NumberInt(42000),
+    "gia_nhap" : NumberInt(20000),
+    "ma_loai" : NumberInt(8),
+    "trang_thai" : NumberInt(1)
+}
+{
+    "_id" : ObjectId("6740ced4831c8722df4e66b2"),
+    "ma_san_pham" : NumberInt(54),
+    "ten_san_pham" : "Sữa hộp 1L Promess ít béo",
+    "so_luong" : NumberInt(50),
+    "gia" : NumberInt(42000),
+    "gia_nhap" : NumberInt(20000),
+    "ma_loai" : NumberInt(8),
+    "trang_thai" : NumberInt(1)
+}
+{
+    "_id" : ObjectId("6740ced4831c8722df4e66b3"),
+    "ma_san_pham" : NumberInt(55),
+    "ten_san_pham" : "Sữa hộp 1L Promess tách béo",
+    "so_luong" : NumberInt(50),
+    "gia" : NumberInt(42000),
+    "gia_nhap" : NumberInt(20000),
+    "ma_loai" : NumberInt(8),
+    "trang_thai" : NumberInt(1)
+}
+{
+    "_id" : ObjectId("6740ced4831c8722df4e66b4"),
+    "ma_san_pham" : NumberInt(56),
+    "ten_san_pham" : "Sữa hộp 1L Mlekovita nguyên kem",
+    "so_luong" : NumberInt(70),
+    "gia" : NumberInt(30000),
+    "gia_nhap" : NumberInt(15000),
+    "ma_loai" : NumberInt(8),
+    "trang_thai" : NumberInt(1)
+}
+{
+    "_id" : ObjectId("6740ced4831c8722df4e66b5"),
+    "ma_san_pham" : NumberInt(57),
+    "ten_san_pham" : "Sữa hộp 1L Mlekovita không đường",
+    "so_luong" : NumberInt(70),
+    "gia" : NumberInt(30000),
+    "gia_nhap" : NumberInt(15000),
+    "ma_loai" : NumberInt(8),
+    "trang_thai" : NumberInt(1)
+}
+{
+    "_id" : ObjectId("6740ced4831c8722df4e66b6"),
+    "ma_san_pham" : NumberInt(58),
+    "ten_san_pham" : "Sữa gạo hộp 1L Woongjin",
+    "so_luong" : NumberInt(70),
+    "gia" : NumberInt(45000),
+    "gia_nhap" : NumberInt(20000),
+    "ma_loai" : NumberInt(8),
+    "trang_thai" : NumberInt(1)
+}
+{
+    "_id" : ObjectId("6740ced4831c8722df4e66b7"),
+    "ma_san_pham" : NumberInt(59),
+    "ten_san_pham" : "Sữa gạo lứt đen hộp 1L Woongjin",
+    "so_luong" : NumberInt(70),
+    "gia" : NumberInt(48000),
+    "gia_nhap" : NumberInt(20000),
+    "ma_loai" : NumberInt(8),
+    "trang_thai" : NumberInt(1)
+}
+{
+    "_id" : ObjectId("6740ced4831c8722df4e66b8"),
+    "ma_san_pham" : NumberInt(60),
+    "ten_san_pham" : "Dầu ăn Simply",
+    "so_luong" : NumberInt(60),
+    "gia" : NumberInt(54000),
+    "gia_nhap" : NumberInt(25000),
+    "ma_loai" : NumberInt(9),
+    "trang_thai" : NumberInt(1)
+}
+{
+    "_id" : ObjectId("6740ced4831c8722df4e66b9"),
+    "ma_san_pham" : NumberInt(61),
+    "ten_san_pham" : "Dầu ăn Tường an",
+    "so_luong" : NumberInt(60),
+    "gia" : NumberInt(27000),
+    "gia_nhap" : NumberInt(15000),
+    "ma_loai" : NumberInt(9),
+    "trang_thai" : NumberInt(1)
+}
+{
+    "_id" : ObjectId("6740ced4831c8722df4e66ba"),
+    "ma_san_pham" : NumberInt(62),
+    "ten_san_pham" : "Dầu ăn Happi Koki",
+    "so_luong" : NumberInt(60),
+    "gia" : NumberInt(20000),
+    "gia_nhap" : NumberInt(10000),
+    "ma_loai" : NumberInt(9),
+    "trang_thai" : NumberInt(1)
+}
+{
+    "_id" : ObjectId("6740ced4831c8722df4e66bb"),
+    "ma_san_pham" : NumberInt(63),
+    "ten_san_pham" : "Nước tương Tam thái tử",
+    "so_luong" : NumberInt(60),
+    "gia" : NumberInt(10000),
+    "gia_nhap" : NumberInt(5000),
+    "ma_loai" : NumberInt(10),
+    "trang_thai" : NumberInt(1)
+}
+{
+    "_id" : ObjectId("6740ced4831c8722df4e66bc"),
+    "ma_san_pham" : NumberInt(64),
+    "ten_san_pham" : "Nước tương Chinsu",
+    "so_luong" : NumberInt(60),
+    "gia" : NumberInt(15000),
+    "gia_nhap" : NumberInt(5000),
+    "ma_loai" : NumberInt(10),
+    "trang_thai" : NumberInt(1)
+}
+{
+    "_id" : ObjectId("6740ced4831c8722df4e66bd"),
+    "ma_san_pham" : NumberInt(65),
+    "ten_san_pham" : "Nước tương Maggi",
+    "so_luong" : NumberInt(60),
+    "gia" : NumberInt(15000),
+    "gia_nhap" : NumberInt(5000),
+    "ma_loai" : NumberInt(10),
+    "trang_thai" : NumberInt(1)
+}
+{
+    "_id" : ObjectId("6740ced4831c8722df4e66be"),
+    "ma_san_pham" : NumberInt(66),
+    "ten_san_pham" : "Nước mắm Chinsu",
+    "so_luong" : NumberInt(60),
+    "gia" : NumberInt(15000),
+    "gia_nhap" : NumberInt(5000),
+    "ma_loai" : NumberInt(11),
+    "trang_thai" : NumberInt(1)
+}
+{
+    "_id" : ObjectId("6740ced4831c8722df4e66bf"),
+    "ma_san_pham" : NumberInt(67),
+    "ten_san_pham" : "Nước mắm Nam ngư",
+    "so_luong" : NumberInt(60),
+    "gia" : NumberInt(15000),
+    "gia_nhap" : NumberInt(5000),
+    "ma_loai" : NumberInt(11),
+    "trang_thai" : NumberInt(1)
+}
+{
+    "_id" : ObjectId("6740ced4831c8722df4e66c0"),
+    "ma_san_pham" : NumberInt(68),
+    "ten_san_pham" : "Tương ớt Chinsu",
+    "so_luong" : NumberInt(60),
+    "gia" : NumberInt(12000),
+    "gia_nhap" : NumberInt(5000),
+    "ma_loai" : NumberInt(12),
+    "trang_thai" : NumberInt(1)
+}
+{
+    "_id" : ObjectId("6740ced4831c8722df4e66c1"),
+    "ma_san_pham" : NumberInt(69),
+    "ten_san_pham" : "Tương ớt Knol",
+    "so_luong" : NumberInt(60),
+    "gia" : NumberInt(12000),
+    "gia_nhap" : NumberInt(5000),
+    "ma_loai" : NumberInt(12),
+    "trang_thai" : NumberInt(1)
+}
+{
+    "_id" : ObjectId("6740ced4831c8722df4e66c2"),
+    "ma_san_pham" : NumberInt(70),
+    "ten_san_pham" : "Tương ớt Cholimex",
+    "so_luong" : NumberInt(60),
+    "gia" : NumberInt(12000),
+    "gia_nhap" : NumberInt(5000),
+    "ma_loai" : NumberInt(12),
+    "trang_thai" : NumberInt(1)
+}
+{
+    "_id" : ObjectId("6740ced4831c8722df4e66c3"),
+    "ma_san_pham" : NumberInt(71),
+    "ten_san_pham" : "Tương cà Cholimex",
+    "so_luong" : NumberInt(60),
+    "gia" : NumberInt(12000),
+    "gia_nhap" : NumberInt(5000),
+    "ma_loai" : NumberInt(12),
+    "trang_thai" : NumberInt(1)
+}
+{
+    "_id" : ObjectId("6740ced4831c8722df4e66c4"),
+    "ma_san_pham" : NumberInt(72),
+    "ten_san_pham" : "Tương cà Heinz",
+    "so_luong" : NumberInt(60),
+    "gia" : NumberInt(32000),
+    "gia_nhap" : NumberInt(15000),
+    "ma_loai" : NumberInt(12),
+    "trang_thai" : NumberInt(1)
+}
+{
+    "_id" : ObjectId("6740ced4831c8722df4e66c5"),
+    "ma_san_pham" : NumberInt(73),
+    "ten_san_pham" : "Trà Olong",
+    "so_luong" : NumberInt(0),
+    "gia" : NumberInt(10000),
+    "gia_nhap" : NumberInt(5000),
+    "ma_loai" : NumberInt(2),
+    "trang_thai" : NumberInt(0)
+}

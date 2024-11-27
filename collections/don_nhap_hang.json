@@ -1,0 +1,54 @@
+{
+    "_id" : ObjectId("6740ccfc831c8722df4e65ba"),
+    "ma_don_nh" : NumberInt(1),
+    "ma_ncc" : NumberInt(2),
+    "ma_nhan_vien" : NumberInt(4),
+    "ngay_nhap" : ISODate("2023-10-15T00:00:00.000+0000"),
+    "tong_tien_nhap" : NumberInt(1575000),
+    "trang_thai" : NumberInt(1)
+}
+{
+    "_id" : ObjectId("6740ccfc831c8722df4e65bb"),
+    "ma_don_nh" : NumberInt(2),
+    "ma_ncc" : NumberInt(1),
+    "ma_nhan_vien" : NumberInt(4),
+    "ngay_nhap" : ISODate("2023-10-15T00:00:00.000+0000"),
+    "tong_tien_nhap" : NumberInt(6440000),
+    "trang_thai" : NumberInt(1)
+}
+{
+    "_id" : ObjectId("6740ccfc831c8722df4e65bc"),
+    "ma_don_nh" : NumberInt(3),
+    "ma_ncc" : NumberInt(4),
+    "ma_nhan_vien" : NumberInt(4),
+    "ngay_nhap" : ISODate("2023-10-15T00:00:00.000+0000"),
+    "tong_tien_nhap" : NumberInt(24750000),
+    "trang_thai" : NumberInt(1)
+}
+{
+    "_id" : ObjectId("6740ccfc831c8722df4e65bd"),
+    "ma_don_nh" : NumberInt(4),
+    "ma_ncc" : NumberInt(3),
+    "ma_nhan_vien" : NumberInt(4),
+    "ngay_nhap" : ISODate("2023-10-15T00:00:00.000+0000"),
+    "tong_tien_nhap" : NumberInt(6200000),
+    "trang_thai" : NumberInt(1)
+}
+{
+    "_id" : ObjectId("6740ccfc831c8722df4e65be"),
+    "ma_don_nh" : NumberInt(5),
+    "ma_ncc" : NumberInt(5),
+    "ma_nhan_vien" : NumberInt(4),
+    "ngay_nhap" : ISODate("2023-10-15T00:00:00.000+0000"),
+    "tong_tien_nhap" : NumberInt(11400000),
+    "trang_thai" : NumberInt(1)
+}
+{
+    "_id" : ObjectId("6740ccfc831c8722df4e65bf"),
+    "ma_don_nh" : NumberInt(6),
+    "ma_ncc" : NumberInt(6),
+    "ma_nhan_vien" : NumberInt(4),
+    "ngay_nhap" : ISODate("2023-10-15T00:00:00.000+0000"),
+    "tong_tien_nhap" : NumberInt(6500000),
+    "trang_thai" : NumberInt(1)
+}

@@ -1,0 +1,42 @@
+{
+    "_id" : ObjectId("6740ce45831c8722df4e6631"),
+    "ma_ncc" : NumberInt(1),
+    "ten_ncc" : "Nhà cung cấp nước uống",
+    "dia_chi" : "TP.HCM",
+    "trang_thai" : NumberInt(1)
+}
+{
+    "_id" : ObjectId("6740ce45831c8722df4e6632"),
+    "ma_ncc" : NumberInt(2),
+    "ten_ncc" : "Nhà cung cấp thực phẩm ăn liền",
+    "dia_chi" : "Bình Dương",
+    "trang_thai" : NumberInt(1)
+}
+{
+    "_id" : ObjectId("6740ce45831c8722df4e6633"),
+    "ma_ncc" : NumberInt(3),
+    "ten_ncc" : "Nhà cung cấp bánh",
+    "dia_chi" : "TP.HCM",
+    "trang_thai" : NumberInt(1)
+}
+{
+    "_id" : ObjectId("6740ce45831c8722df4e6634"),
+    "ma_ncc" : NumberInt(4),
+    "ten_ncc" : "Nhà cung cấp đồ dùng thiết yếu",
+    "dia_chi" : "TP.Thủ Đức",
+    "trang_thai" : NumberInt(1)
+}
+{
+    "_id" : ObjectId("6740ce45831c8722df4e6635"),
+    "ma_ncc" : NumberInt(5),
+    "ten_ncc" : "Nhà cung cấp sữa",
+    "dia_chi" : "TP.HCM",
+    "trang_thai" : NumberInt(1)
+}
+{
+    "_id" : ObjectId("6740ce45831c8722df4e6636"),
+    "ma_ncc" : NumberInt(6),
+    "ten_ncc" : "Nhà cung cấp gia vị",
+    "dia_chi" : "Vũng Tàu",
+    "trang_thai" : NumberInt(1)
+}

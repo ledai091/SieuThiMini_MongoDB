@@ -1,0 +1,91 @@
+{
+    "_id" : ObjectId("6740cdcf831c8722df4e65f6"),
+    "ma_loai" : NumberInt(1),
+    "ten_loai" : "Mì gói",
+    "ma_ncc" : NumberInt(2),
+    "trang_thai" : NumberInt(1)
+}
+{
+    "_id" : ObjectId("6740cdcf831c8722df4e65f7"),
+    "ma_loai" : NumberInt(2),
+    "ten_loai" : "Nước uống",
+    "ma_ncc" : NumberInt(1),
+    "trang_thai" : NumberInt(1)
+}
+{
+    "_id" : ObjectId("6740cdcf831c8722df4e65f8"),
+    "ma_loai" : NumberInt(3),
+    "ten_loai" : "Kem đánh răng",
+    "ma_ncc" : NumberInt(4),
+    "trang_thai" : NumberInt(1)
+}
+{
+    "_id" : ObjectId("6740cdcf831c8722df4e65f9"),
+    "ma_loai" : NumberInt(4),
+    "ten_loai" : "Khăn giấy",
+    "ma_ncc" : NumberInt(4),
+    "trang_thai" : NumberInt(1)
+}
+{
+    "_id" : ObjectId("6740cdcf831c8722df4e65fa"),
+    "ma_loai" : NumberInt(5),
+    "ten_loai" : "Xà phòng",
+    "ma_ncc" : NumberInt(4),
+    "trang_thai" : NumberInt(1)
+}
+{
+    "_id" : ObjectId("6740cdcf831c8722df4e65fb"),
+    "ma_loai" : NumberInt(6),
+    "ten_loai" : "Snack",
+    "ma_ncc" : NumberInt(3),
+    "trang_thai" : NumberInt(1)
+}
+{
+    "_id" : ObjectId("6740cdcf831c8722df4e65fc"),
+    "ma_loai" : NumberInt(7),
+    "ten_loai" : "Bánh bao",
+    "ma_ncc" : NumberInt(3),
+    "trang_thai" : NumberInt(1)
+}
+{
+    "_id" : ObjectId("6740cdcf831c8722df4e65fd"),
+    "ma_loai" : NumberInt(8),
+    "ten_loai" : "Sữa",
+    "ma_ncc" : NumberInt(5),
+    "trang_thai" : NumberInt(1)
+}
+{
+    "_id" : ObjectId("6740cdcf831c8722df4e65fe"),
+    "ma_loai" : NumberInt(9),
+    "ten_loai" : "Dầu ăn",
+    "ma_ncc" : NumberInt(6),
+    "trang_thai" : NumberInt(1)
+}
+{
+    "_id" : ObjectId("6740cdcf831c8722df4e65ff"),
+    "ma_loai" : NumberInt(10),
+    "ten_loai" : "Nước tương",
+    "ma_ncc" : NumberInt(6),
+    "trang_thai" : NumberInt(1)
+}
+{
+    "_id" : ObjectId("6740cdcf831c8722df4e6600"),
+    "ma_loai" : NumberInt(11),
+    "ten_loai" : "Nước mắm",
+    "ma_ncc" : NumberInt(6),
+    "trang_thai" : NumberInt(1)
+}
+{
+    "_id" : ObjectId("6740cdcf831c8722df4e6601"),
+    "ma_loai" : NumberInt(12),
+    "ten_loai" : "Tương",
+    "ma_ncc" : NumberInt(6),
+    "trang_thai" : NumberInt(1)
+}
+{
+    "_id" : ObjectId("6740cdcf831c8722df4e6602"),
+    "ma_loai" : NumberInt(16),
+    "ten_loai" : "Khac",
+    "ma_ncc" : NumberInt(1),
+    "trang_thai" : NumberInt(0)
+}

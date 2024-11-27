@@ -1,0 +1,40 @@
+{
+    "_id" : ObjectId("6740ceb2831c8722df4e6651"),
+    "ma_tai_khoan" : NumberInt(0),
+    "ten_tai_khoan" : "none",
+    "mat_khau" : "123456",
+    "phan_quyen" : NumberInt(3),
+    "trang_thai" : NumberInt(1)
+}
+{
+    "_id" : ObjectId("6740ceb2831c8722df4e6652"),
+    "ma_tai_khoan" : NumberInt(1),
+    "ten_tai_khoan" : "admin",
+    "mat_khau" : "123456",
+    "phan_quyen" : NumberInt(0),
+    "trang_thai" : NumberInt(1)
+}
+{
+    "_id" : ObjectId("6740ceb2831c8722df4e6653"),
+    "ma_tai_khoan" : NumberInt(2),
+    "ten_tai_khoan" : "quanly1",
+    "mat_khau" : "123456",
+    "phan_quyen" : NumberInt(1),
+    "trang_thai" : NumberInt(1)
+}
+{
+    "_id" : ObjectId("6740ceb2831c8722df4e6654"),
+    "ma_tai_khoan" : NumberInt(3),
+    "ten_tai_khoan" : "nhanvien1",
+    "mat_khau" : "123456",
+    "phan_quyen" : NumberInt(2),
+    "trang_thai" : NumberInt(1)
+}
+{
+    "_id" : ObjectId("6740ceb2831c8722df4e6655"),
+    "ma_tai_khoan" : NumberInt(4),
+    "ten_tai_khoan" : "nhanvien2",
+    "mat_khau" : "123456",
+    "phan_quyen" : NumberInt(2),
+    "trang_thai" : NumberInt(1)
+}
