@@ -1,0 +1,15 @@
+[
+{"ma_hoa_don":"1","ma_san_pham":"1","ten_san_pham":"Mì gói 3 miền","so_luong":"2","gia_san_pham":"5000","thanh_tien":"10000"},
+{"ma_hoa_don":"1","ma_san_pham":"2","ten_san_pham":"Pepsi","so_luong":"2","gia_san_pham":"10000","thanh_tien":"20000"},
+{"ma_hoa_don":"6","ma_san_pham":"1","ten_san_pham":"Mì gói 3 miền","so_luong":"1","gia_san_pham":"5000","thanh_tien":"5000"},
+{"ma_hoa_don":"6","ma_san_pham":"3","ten_san_pham":"Phở gói Đệ Nhất","so_luong":"1","gia_san_pham":"8000","thanh_tien":"8000"},
+{"ma_hoa_don":"6","ma_san_pham":"6","ten_san_pham":"Giấy cuộn","so_luong":"1","gia_san_pham":"4000","thanh_tien":"4000"},
+{"ma_hoa_don":"6","ma_san_pham":"9","ten_san_pham":"Coca cola","so_luong":"1","gia_san_pham":"10000","thanh_tien":"10000"},
+{"ma_hoa_don":"6","ma_san_pham":"10","ten_san_pham":"7Up","so_luong":"2","gia_san_pham":"10000","thanh_tien":"20000"},
+{"ma_hoa_don":"7","ma_san_pham":"2","ten_san_pham":"Pepsi","so_luong":"1","gia_san_pham":"10000","thanh_tien":"10000"},
+{"ma_hoa_don":"7","ma_san_pham":"6","ten_san_pham":"Giấy cuộn","so_luong":"1","gia_san_pham":"4000","thanh_tien":"4000"},
+{"ma_hoa_don":"7","ma_san_pham":"8","ten_san_pham":"Kem đánh răng PS","so_luong":"1","gia_san_pham":"28000","thanh_tien":"28000"},
+{"ma_hoa_don":"8","ma_san_pham":"1","ten_san_pham":"Mì gói 3 miền","so_luong":"1","gia_san_pham":"5000","thanh_tien":"5000"},
+{"ma_hoa_don":"8","ma_san_pham":"6","ten_san_pham":"Giấy cuộn","so_luong":"1","gia_san_pham":"4000","thanh_tien":"4000"},
+{"ma_hoa_don":"8","ma_san_pham":"9","ten_san_pham":"Coca cola","so_luong":"1","gia_san_pham":"10000","thanh_tien":"10000"}
+]
