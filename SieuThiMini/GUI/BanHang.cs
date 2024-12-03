@@ -35,23 +35,24 @@ namespace SieuThiMini.GUI
             List<SanPhamDTO> listSP = spBLL.GetList();
             listSP.RemoveAll(x => x.SoLuong < 1);
             grid_SanPham.DataSource = listSP;
-            grid_SanPham.Columns["ma_loai"].Visible = false;
-            grid_SanPham.Columns["trang_thai"].Visible = false;
-            grid_SanPham.Columns["gia_nhap"].Visible = false;
+            grid_SanPham.Columns["MaLoai"].Visible = false;
+            grid_SanPham.Columns["TrangThai"].Visible = false;
+            grid_SanPham.Columns["GiaNhap"].Visible = false;
             grid_SanPham.CurrentCell.Selected = false;
-            grid_SanPham.Columns["ma_san_pham"].HeaderText = "Mã sản phẩm";
-            grid_SanPham.Columns["ten_san_pham"].HeaderText = "Tên sản phẩm";
-            grid_SanPham.Columns["so_luong"].HeaderText = "Số lượng";
-            grid_SanPham.Columns["gia"].HeaderText = "Giá";
-
+            grid_SanPham.Columns["MaSanPham"].HeaderText = "Mã sản phẩm";
+            grid_SanPham.Columns["TenSanPham"].HeaderText = "Tên sản phẩm";
+            grid_SanPham.Columns["SoLuong"].HeaderText = "Số lượng";
+            grid_SanPham.Columns["Gia"].HeaderText = "Giá";
             List<CTHoaDonDTO> dsCTHD = new List<CTHoaDonDTO>();
             grid_HoaDon.DataSource = dsCTHD;
-            grid_HoaDon.Columns["ma_hoa_don"].Visible = false;
-            grid_HoaDon.Columns["ma_san_pham"].HeaderText = "Mã sản phẩm";
-            grid_HoaDon.Columns["ten_san_pham"].HeaderText = "Tên sản phẩm";
-            grid_HoaDon.Columns["so_luong"].HeaderText = "Số lượng";
-            grid_HoaDon.Columns["gia_san_pham"].HeaderText = "Giá";
-            grid_HoaDon.Columns["thanh_tien"].HeaderText = "Thành tiền";
+            grid_HoaDon.Columns["MaHoaDon"].Visible = false;
+            grid_HoaDon.Columns["Id"].Visible = false;
+            grid_HoaDon.Columns["MaSanPham"].HeaderText = "Mã sản phẩm";
+            grid_HoaDon.Columns["TenSanPham"].HeaderText = "Tên sản phẩm";
+            grid_HoaDon.Columns["SoLuong"].HeaderText = "Số lượng";
+            grid_HoaDon.Columns["GiaSanPham"].HeaderText = "Giá";
+            grid_HoaDon.Columns["ThanhTien"].HeaderText = "Thành tiền";
+            grid_HoaDon.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
         }
 
         public void update()
@@ -104,7 +105,7 @@ namespace SieuThiMini.GUI
             decimal tongtien = 0;
             foreach (DataGridViewRow row in grid_HoaDon.Rows)
             {
-                tongtien += Convert.ToDecimal(row.Cells["thanh_tien"].Value);
+                tongtien += Convert.ToDecimal(row.Cells["ThanhTien"].Value);
             }
             label_TT.Text = tongtien.ToString();
         }
@@ -127,20 +128,20 @@ namespace SieuThiMini.GUI
             DataGridViewRow selectedrow = grid_SanPham.Rows[grid_SanPham.CurrentRow.Index];
             foreach(DataGridViewRow dr in grid_HoaDon.Rows)
             {
-                if (Convert.ToInt32(dr.Cells["ma_san_pham"].Value) == Convert.ToInt32(selectedrow.Cells["ma_san_pham"].Value))
+                if (Convert.ToInt32(dr.Cells["MaSanPham"].Value) == Convert.ToInt32(selectedrow.Cells["MaSanPham"].Value))
                 {
-                    dr.Cells["so_luong"].Value = Convert.ToInt32(dr.Cells["so_luong"].Value) + Convert.ToInt32(ud_SoLuong.Value);
-                    dr.Cells["thanh_tien"].Value = Convert.ToInt32(dr.Cells["so_luong"].Value) * Convert.ToDecimal(dr.Cells["gia_san_pham"].Value);
-                    ud_SoLuong.Maximum = Convert.ToInt32(selectedrow.Cells["so_luong"].Value) - Convert.ToInt32(dr.Cells["so_luong"].Value);
+                    dr.Cells["SoLuong"].Value = Convert.ToInt32(dr.Cells["SoLuong"].Value) + Convert.ToInt32(ud_SoLuong.Value);
+                    dr.Cells["ThanhTien"].Value = Convert.ToInt32(dr.Cells["SoLuong"].Value) * Convert.ToDecimal(dr.Cells["GiaSanPham"].Value);
+                    ud_SoLuong.Maximum = Convert.ToInt32(selectedrow.Cells["SoLuong"].Value) - Convert.ToInt32(dr.Cells["SoLuong"].Value);
                     grid_HoaDon.CurrentCell.Selected = false;
                     update_TT();
                     return;
                 }
             }
             int soLuong = Convert.ToInt32(ud_SoLuong.Value);
-            int maSanPham = Convert.ToInt32(selectedrow.Cells["ma_san_pham"].Value);
-            string tenSanPham = selectedrow.Cells["ten_san_pham"].Value.ToString();
-            decimal gia = Convert.ToDecimal(selectedrow.Cells["gia"].Value);
+            int maSanPham = Convert.ToInt32(selectedrow.Cells["MaSanPham"].Value);
+            string tenSanPham = selectedrow.Cells["TenSanPham"].Value.ToString();
+            decimal gia = Convert.ToDecimal(selectedrow.Cells["Gia"].Value);
             decimal thanhTien = soLuong * gia;
             HoaDonBLL hdBLL = new HoaDonBLL();
             List<HoaDonDTO> dsHoaDon = hdBLL.GetList();
@@ -149,7 +150,7 @@ namespace SieuThiMini.GUI
             dsCTHD.AddRange((List<CTHoaDonDTO>)grid_HoaDon.DataSource);
             dsCTHD.Add(cthd);
             grid_HoaDon.DataSource = dsCTHD;
-            ud_SoLuong.Maximum = Convert.ToInt32(selectedrow.Cells["so_luong"].Value) - soLuong;
+            ud_SoLuong.Maximum = Convert.ToInt32(selectedrow.Cells["SoLuong"].Value) - soLuong;
             update_TT();
             return;
         }
@@ -162,9 +163,9 @@ namespace SieuThiMini.GUI
         {
             foreach(DataGridViewRow dr in grid_HoaDon.Rows)
             {
-                if (Convert.ToInt32(dr.Cells["ma_san_pham"].Value) == Convert.ToInt32(grid_SanPham.Rows[e.RowIndex].Cells["ma_san_pham"].Value))
+                if (Convert.ToInt32(dr.Cells["MaSanPham"].Value) == Convert.ToInt32(grid_SanPham.Rows[e.RowIndex].Cells["MaSanPham"].Value))
                 {
-                    ud_SoLuong.Maximum = Convert.ToDecimal(grid_SanPham.Rows[e.RowIndex].Cells["so_luong"].Value) - Convert.ToDecimal(dr.Cells["so_luong"].Value);
+                    ud_SoLuong.Maximum = Convert.ToDecimal(grid_SanPham.Rows[e.RowIndex].Cells["SoLuong"].Value) - Convert.ToDecimal(dr.Cells["SoLuong"].Value);
                     if (ud_SoLuong.Maximum > 0)
                     {
                         ud_SoLuong.Value = 1;
@@ -172,7 +173,7 @@ namespace SieuThiMini.GUI
                     return;
                 }
             }
-            ud_SoLuong.Maximum = Convert.ToDecimal(grid_SanPham.Rows[e.RowIndex].Cells["so_luong"].Value);
+            ud_SoLuong.Maximum = Convert.ToDecimal(grid_SanPham.Rows[e.RowIndex].Cells["SoLuong"].Value);
             if (ud_SoLuong.Maximum > 0)
             {
                 ud_SoLuong.Value = 1;
@@ -181,18 +182,30 @@ namespace SieuThiMini.GUI
 
         private void btn_XoaMon_Click(object sender, EventArgs e)
         {
-            if(grid_HoaDon.CurrentCell == null)
+            if (grid_HoaDon.CurrentCell == null)
             {
                 MessageBox.Show("Chọn sản phẩm cần xóa");
                 return;
             }
-            List<CTHoaDonDTO> dsCTHD = new List<CTHoaDonDTO>();
-            dsCTHD.AddRange((List<CTHoaDonDTO>)grid_HoaDon.DataSource);
-            dsCTHD.RemoveAll(x => x.MaSanPham == Convert.ToInt32(grid_HoaDon.Rows[grid_HoaDon.CurrentRow.Index].Cells[1].Value));
-            grid_HoaDon.DataSource = dsCTHD;
-            grid_SanPham.CurrentCell.Selected = false;
+
+            // Get the selected product in the HoaDon grid
+            int maSanPham = Convert.ToInt32(grid_HoaDon.Rows[grid_HoaDon.CurrentRow.Index].Cells["MaSanPham"].Value);
+
+            // Remove the selected product from the data source
+            List<CTHoaDonDTO> dsCTHD = (List<CTHoaDonDTO>)grid_HoaDon.DataSource;
+            dsCTHD.RemoveAll(x => x.MaSanPham == maSanPham);
+
+            // Update the data source of the HoaDon grid
+            grid_HoaDon.DataSource = null; // Clear existing binding
+            grid_HoaDon.DataSource = dsCTHD; // Bind the updated list
+
+            // Update the total amount
             update_TT();
+
+            // Optionally, reset selection and update other controls if needed
+            grid_SanPham.CurrentCell.Selected = false;
         }
+
 
         private void btn_ThanhToan_Click(object sender, EventArgs e)
         {
