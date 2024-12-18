@@ -38,12 +38,12 @@ namespace SieuThiMini.BLL
             dal.Update(dto);
         }
 
-        public void Delete(string id)
+        public void Delete(int id)
         {
             dal.Delete(id);
         }
 
-        public void Restore(string id)
+        public void Restore(int id)
         {
             dal.Restore(id);
         }

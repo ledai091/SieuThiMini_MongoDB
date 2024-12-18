@@ -22,7 +22,7 @@ namespace SieuThiMini.GUI
 
         private void LoginGUI_Load(object sender, EventArgs e)
         {
-            txtUsername.Text = "quanly1";
+            txtUsername.Text = "nhanvien1";
             txtPassword.Text = "123456";
         }
         private void btnSignIn_Click(object sender, EventArgs e)
@@ -100,5 +100,9 @@ namespace SieuThiMini.GUI
 
         }
 
+        private void txtUsername_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

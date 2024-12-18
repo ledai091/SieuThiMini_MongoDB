@@ -21,17 +21,17 @@ namespace SieuThiMini.GUI
             List<HoaDonDTO> danhSachHoaDon = hoaDonBLL.GetListDeleted();
 
             grid_DSHDXoa.DataSource = danhSachHoaDon;
-            grid_DSHDXoa.Columns["ma_hoa_don"].HeaderText = "Mã Hóa Đơn";
-            grid_DSHDXoa.Columns["ngay_xuat"].HeaderText = "Ngày Xuất";
-            grid_DSHDXoa.Columns["ma_nhan_vien"].HeaderText = "Mã Nhân Viên";
-            grid_DSHDXoa.Columns["tong_tien"].HeaderText = "Tổng Tiền";
-            grid_DSHDXoa.Columns["trang_thai"].HeaderText = "Trạng Thái";
+            grid_DSHDXoa.Columns["MaHoaDon"].HeaderText = "Mã Hóa Đơn";
+            grid_DSHDXoa.Columns["NgayXuat"].HeaderText = "Ngày Xuất";
+            grid_DSHDXoa.Columns["MaNhanVien"].HeaderText = "Mã Nhân Viên";
+            grid_DSHDXoa.Columns["TongTien"].HeaderText = "Tổng Tiền";
+            grid_DSHDXoa.Columns["TrangThai"].HeaderText = "Trạng Thái";
 
-            grid_DSHDXoa.Columns["ma_hoa_don"].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-            grid_DSHDXoa.Columns["ngay_xuat"].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-            grid_DSHDXoa.Columns["ma_nhan_vien"].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-            grid_DSHDXoa.Columns["tong_tien"].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-            grid_DSHDXoa.Columns["trang_thai"].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            grid_DSHDXoa.Columns["MaHoaDon"].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            grid_DSHDXoa.Columns["NgayXuat"].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            grid_DSHDXoa.Columns["MaNhanVien"].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            grid_DSHDXoa.Columns["TongTien"].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            grid_DSHDXoa.Columns["TrangThai"].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
         }
 
         private void btn_Restore_Click(object sender, EventArgs e)
@@ -40,7 +40,7 @@ namespace SieuThiMini.GUI
             {
                 int selectedRowIndex = grid_DSHDXoa.SelectedCells[0].RowIndex;
                 DataGridViewRow selectedRow = grid_DSHDXoa.Rows[selectedRowIndex];
-                string maHoaDon = selectedRow.Cells["ma_hoa_don"].Value.ToString();
+                int maHoaDon = Convert.ToInt32(selectedRow.Cells["MaHoaDon"].Value.ToString());
                 HoaDonBLL hoadon = new HoaDonBLL();
                 hoadon.Restore(maHoaDon);
 

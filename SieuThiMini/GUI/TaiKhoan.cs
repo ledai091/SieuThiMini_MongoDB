@@ -11,7 +11,7 @@ namespace SieuThiMini.GUI
 {
     public partial class TaiKhoan : Form
     {
-        private readonly TaiKhoanBLL tkBLL = new TaiKhoanBLL();
+
 
         public TaiKhoan()
         {
@@ -38,6 +38,7 @@ namespace SieuThiMini.GUI
 
         private void LoadDataGrid()
         {
+            TaiKhoanBLL tkBLL = new TaiKhoanBLL();
             var listTK = tkBLL.SelectAll();
             grid_TK.DataSource = listTK;
 
@@ -83,7 +84,7 @@ namespace SieuThiMini.GUI
             textBox_TenTK.Enabled = isEnabled;
             textBox_MK.Enabled = isEnabled;
             cb_PhanQuyen.Enabled = isEnabled;
-
+            textBox_MaTK.Enabled = isEnabled;
             btn_Save.Visible = isEnabled;
             btn_Huy.Visible = isEnabled;
         }
@@ -114,6 +115,7 @@ namespace SieuThiMini.GUI
 
         private void btn_Save_Click(object sender, EventArgs e)
         {
+            TaiKhoanBLL tkBLL = new TaiKhoanBLL();
             if (ValidateInputs())
             {
                 int maTK = int.Parse(textBox_MaTK.Text);
@@ -150,6 +152,7 @@ namespace SieuThiMini.GUI
 
         private void btn_XoaTK_Click(object sender, EventArgs e)
         {
+            TaiKhoanBLL tkBLL = new TaiKhoanBLL();
             if (string.IsNullOrWhiteSpace(textBox_MaTK.Text))
             {
                 MessageBox.Show("Vui lòng chọn tài khoản cần xóa!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -178,6 +181,7 @@ namespace SieuThiMini.GUI
 
         private void textBox_TimTK_TextChanged(object sender, EventArgs e)
         {
+            TaiKhoanBLL tkBLL = new TaiKhoanBLL();
             string keyword = textBox_TimTK.Text.ToLower();
             var listTK = tkBLL.TimKiem(keyword);
             grid_TK.DataSource = listTK;

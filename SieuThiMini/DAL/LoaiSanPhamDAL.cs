@@ -26,7 +26,7 @@ namespace SieuThiMini.DAL
 
         public List<LoaiSanPhamDTO> SelectAllDeleted()
         {
-            var filter = Builders<BsonDocument>.Filter.Eq("trang_thai", "0");
+            var filter = Builders<BsonDocument>.Filter.Eq("trang_thai", 0);
             var documents = _collection.Find(filter).ToList();
             return MapToDTOList(documents);
         }
@@ -44,24 +44,24 @@ namespace SieuThiMini.DAL
 
         public void Update(LoaiSanPhamDTO target)
         {
-            var filter = Builders<BsonDocument>.Filter.Eq("_id", new ObjectId(target.MaLoai.ToString()));
+            var filter = Builders<BsonDocument>.Filter.Eq("ma_loai", target.MaLoai);
             var update = Builders<BsonDocument>.Update
                 .Set("ten_loai", target.TenLoai)
                 .Set("ma_ncc", target.MaNhaCungCap);
             _collection.UpdateOne(filter, update);
         }
 
-        public void Delete(string id)
+        public void Delete(int id)
         {
-            var filter = Builders<BsonDocument>.Filter.Eq("_id", new ObjectId(id));
-            var update = Builders<BsonDocument>.Update.Set("trang_thai", "0");
+            var filter = Builders<BsonDocument>.Filter.Eq("ma_loai", id);
+            var update = Builders<BsonDocument>.Update.Set("trang_thai", 0);
             _collection.UpdateOne(filter, update);
         }
 
-        public void Restore(string id)
+        public void Restore(int id)
         {
-            var filter = Builders<BsonDocument>.Filter.Eq("_id", new ObjectId(id));
-            var update = Builders<BsonDocument>.Update.Set("trang_thai", "1");
+            var filter = Builders<BsonDocument>.Filter.Eq("ma_loai", id);
+            var update = Builders<BsonDocument>.Update.Set("trang_thai", 1);
             _collection.UpdateOne(filter, update);
         }
 
@@ -72,7 +72,7 @@ namespace SieuThiMini.DAL
             return MapToDTOList(documents);
         }
 
-        public List<LoaiSanPhamDTO> GetLSPByNCC(string maNcc)
+        public List<LoaiSanPhamDTO> GetLSPByNCC(int maNcc)
         {
             var filter = Builders<BsonDocument>.Filter.Eq("ma_ncc", maNcc);
             var documents = _collection.Find(filter).ToList();
@@ -88,21 +88,34 @@ namespace SieuThiMini.DAL
 
         public List<LoaiSanPhamDTO> TimKiem(string timkiem)
         {
-            var filter = Builders<BsonDocument>.Filter.And(
-                Builders<BsonDocument>.Filter.Eq("trang_thai", "1"),
-                Builders<BsonDocument>.Filter.Or(
-                    Builders<BsonDocument>.Filter.Eq("_id", new ObjectId(timkiem)),
-                    Builders<BsonDocument>.Filter.Regex("ten_loai", new BsonRegularExpression(timkiem, "i"))
-                )
-            );
-            var documents = _collection.Find(filter).ToList();
+            var baseFilter = Builders<BsonDocument>.Filter.Eq("trang_thai", 1);
+            var filters = new List<FilterDefinition<BsonDocument>>();
+
+            // Always add name regex search filter
+            filters.Add(Builders<BsonDocument>.Filter.Regex("ten_loai", new BsonRegularExpression(timkiem, "i")));
+
+            // Try to parse timkiem as an integer
+            if (int.TryParse(timkiem, out int timkiemInt))
+            {
+                // If successful, add the ma_loai filter as well
+                filters.Add(Builders<BsonDocument>.Filter.Eq("ma_loai", timkiemInt));
+            }
+
+            // Combine with OR condition
+            var orFilter = Builders<BsonDocument>.Filter.Or(filters);
+
+            // Combine trang_thai and the OR filters
+            var finalFilter = Builders<BsonDocument>.Filter.And(baseFilter, orFilter);
+
+            var documents = _collection.Find(finalFilter).ToList();
             return MapToDTOList(documents);
         }
+
 
         public List<LoaiSanPhamDTO> TimKiemDeleted(string timkiem)
         {
             var filter = Builders<BsonDocument>.Filter.And(
-                Builders<BsonDocument>.Filter.Eq("trang_thai", "0"),
+                Builders<BsonDocument>.Filter.Eq("trang_thai", 0),
                 Builders<BsonDocument>.Filter.Or(
                     Builders<BsonDocument>.Filter.Eq("_id", new ObjectId(timkiem)),
                     Builders<BsonDocument>.Filter.Regex("ten_loai", new BsonRegularExpression(timkiem, "i"))

@@ -33,17 +33,17 @@ namespace SieuThiMini.BLL
             this.DAL.Update(dto);
         }
 
-        public void Delete(string id)
+        public void Delete(int id)
         {
             this.DAL.Delete(id);
         }
 
-        public void Restore(string id)
+        public void Restore(int id)
         {
             this.DAL.Restore(id);
         }
 
-        public List<LoaiSanPhamDTO> GetLSPByNCC(string ma_ncc)
+        public List<LoaiSanPhamDTO> GetLSPByNCC(int ma_ncc)
         {
             return this.DAL.GetLSPByNCC(ma_ncc);
         }

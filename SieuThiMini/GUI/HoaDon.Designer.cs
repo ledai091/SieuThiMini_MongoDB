@@ -43,7 +43,6 @@
             this.btn_Reload = new System.Windows.Forms.Button();
             this.findDate = new System.Windows.Forms.Button();
             this.grid_DSHoaDon = new System.Windows.Forms.DataGridView();
-            this.DSHoaDon = new MySql.Data.MySqlClient.MySqlDataAdapter();
             this.TimKiem.SuspendLayout();
             this.Date_start.SuspendLayout();
             this.Date_end.SuspendLayout();
@@ -57,18 +56,21 @@
             this.TimKiem.Controls.Add(this.textFind);
             this.TimKiem.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TimKiem.ForeColor = System.Drawing.Color.Black;
-            this.TimKiem.Location = new System.Drawing.Point(92, 44);
+            this.TimKiem.Location = new System.Drawing.Point(69, 35);
+            this.TimKiem.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.TimKiem.Name = "TimKiem";
-            this.TimKiem.Size = new System.Drawing.Size(746, 104);
+            this.TimKiem.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.TimKiem.Size = new System.Drawing.Size(560, 83);
             this.TimKiem.TabIndex = 0;
             this.TimKiem.TabStop = false;
             this.TimKiem.Text = "Tìm kiếm";
             // 
             // textFind
             // 
-            this.textFind.Location = new System.Drawing.Point(6, 43);
+            this.textFind.Location = new System.Drawing.Point(4, 34);
+            this.textFind.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textFind.Name = "textFind";
-            this.textFind.Size = new System.Drawing.Size(734, 44);
+            this.textFind.Size = new System.Drawing.Size(552, 35);
             this.textFind.TabIndex = 0;
             this.textFind.TextChanged += new System.EventHandler(this.textFind_TextChanged);
             // 
@@ -79,26 +81,30 @@
             this.Date_start.Controls.Add(this.pick_DateStart);
             this.Date_start.Controls.Add(this.text_DateStart);
             this.Date_start.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Date_start.Location = new System.Drawing.Point(1021, 44);
+            this.Date_start.Location = new System.Drawing.Point(766, 35);
+            this.Date_start.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Date_start.Name = "Date_start";
-            this.Date_start.Size = new System.Drawing.Size(404, 104);
+            this.Date_start.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Date_start.Size = new System.Drawing.Size(303, 83);
             this.Date_start.TabIndex = 1;
             this.Date_start.TabStop = false;
             this.Date_start.Text = "Từ ngày";
             // 
             // pick_DateStart
             // 
-            this.pick_DateStart.Location = new System.Drawing.Point(346, 43);
+            this.pick_DateStart.Location = new System.Drawing.Point(274, 34);
+            this.pick_DateStart.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pick_DateStart.Name = "pick_DateStart";
-            this.pick_DateStart.Size = new System.Drawing.Size(52, 44);
+            this.pick_DateStart.Size = new System.Drawing.Size(26, 35);
             this.pick_DateStart.TabIndex = 1;
             this.pick_DateStart.ValueChanged += new System.EventHandler(this.pick_DateStart_ValueChanged);
             // 
             // text_DateStart
             // 
-            this.text_DateStart.Location = new System.Drawing.Point(6, 43);
+            this.text_DateStart.Location = new System.Drawing.Point(4, 34);
+            this.text_DateStart.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.text_DateStart.Name = "text_DateStart";
-            this.text_DateStart.Size = new System.Drawing.Size(334, 44);
+            this.text_DateStart.Size = new System.Drawing.Size(252, 35);
             this.text_DateStart.TabIndex = 0;
             // 
             // Date_end
@@ -108,26 +114,30 @@
             this.Date_end.Controls.Add(this.pick_DateEnd);
             this.Date_end.Controls.Add(this.text_DateEnd);
             this.Date_end.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Date_end.Location = new System.Drawing.Point(1431, 44);
+            this.Date_end.Location = new System.Drawing.Point(1073, 35);
+            this.Date_end.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Date_end.Name = "Date_end";
-            this.Date_end.Size = new System.Drawing.Size(404, 104);
+            this.Date_end.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Date_end.Size = new System.Drawing.Size(303, 83);
             this.Date_end.TabIndex = 2;
             this.Date_end.TabStop = false;
             this.Date_end.Text = "Đến ngày";
             // 
             // pick_DateEnd
             // 
-            this.pick_DateEnd.Location = new System.Drawing.Point(346, 43);
+            this.pick_DateEnd.Location = new System.Drawing.Point(273, 34);
+            this.pick_DateEnd.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pick_DateEnd.Name = "pick_DateEnd";
-            this.pick_DateEnd.Size = new System.Drawing.Size(52, 44);
+            this.pick_DateEnd.Size = new System.Drawing.Size(27, 35);
             this.pick_DateEnd.TabIndex = 1;
             this.pick_DateEnd.ValueChanged += new System.EventHandler(this.pick_DateEnd_ValueChanged);
             // 
             // text_DateEnd
             // 
-            this.text_DateEnd.Location = new System.Drawing.Point(6, 43);
+            this.text_DateEnd.Location = new System.Drawing.Point(4, 34);
+            this.text_DateEnd.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.text_DateEnd.Name = "text_DateEnd";
-            this.text_DateEnd.Size = new System.Drawing.Size(334, 44);
+            this.text_DateEnd.Size = new System.Drawing.Size(252, 35);
             this.text_DateEnd.TabIndex = 0;
             // 
             // btn_Remove
@@ -136,10 +146,10 @@
             this.btn_Remove.CausesValidation = false;
             this.btn_Remove.ForeColor = System.Drawing.Color.Black;
             this.btn_Remove.Image = global::SieuThiMini.Properties.Resources.bin;
-            this.btn_Remove.Location = new System.Drawing.Point(772, 185);
-            this.btn_Remove.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btn_Remove.Location = new System.Drawing.Point(579, 148);
+            this.btn_Remove.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.btn_Remove.Name = "btn_Remove";
-            this.btn_Remove.Size = new System.Drawing.Size(66, 66);
+            this.btn_Remove.Size = new System.Drawing.Size(50, 69);
             this.btn_Remove.TabIndex = 8;
             this.btn_Remove.UseVisualStyleBackColor = true;
             this.btn_Remove.Click += new System.EventHandler(this.btn_Remove_Click);
@@ -150,10 +160,10 @@
             this.btn_Restore.CausesValidation = false;
             this.btn_Restore.ForeColor = System.Drawing.Color.Black;
             this.btn_Restore.Image = global::SieuThiMini.Properties.Resources.data_restore;
-            this.btn_Restore.Location = new System.Drawing.Point(637, 185);
-            this.btn_Restore.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btn_Restore.Location = new System.Drawing.Point(478, 148);
+            this.btn_Restore.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.btn_Restore.Name = "btn_Restore";
-            this.btn_Restore.Size = new System.Drawing.Size(66, 66);
+            this.btn_Restore.Size = new System.Drawing.Size(50, 70);
             this.btn_Restore.TabIndex = 7;
             this.btn_Restore.UseVisualStyleBackColor = true;
             this.btn_Restore.Click += new System.EventHandler(this.btn_Restore_Click);
@@ -164,10 +174,10 @@
             this.btn_Excel.CausesValidation = false;
             this.btn_Excel.ForeColor = System.Drawing.Color.Black;
             this.btn_Excel.Image = global::SieuThiMini.Properties.Resources.excel;
-            this.btn_Excel.Location = new System.Drawing.Point(501, 185);
-            this.btn_Excel.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btn_Excel.Location = new System.Drawing.Point(376, 148);
+            this.btn_Excel.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.btn_Excel.Name = "btn_Excel";
-            this.btn_Excel.Size = new System.Drawing.Size(66, 66);
+            this.btn_Excel.Size = new System.Drawing.Size(50, 69);
             this.btn_Excel.TabIndex = 6;
             this.btn_Excel.UseVisualStyleBackColor = true;
             this.btn_Excel.Click += new System.EventHandler(this.btn_Excel_Click);
@@ -178,10 +188,10 @@
             this.btn_ViewDetails.CausesValidation = false;
             this.btn_ViewDetails.ForeColor = System.Drawing.Color.Black;
             this.btn_ViewDetails.Image = global::SieuThiMini.Properties.Resources.view_details;
-            this.btn_ViewDetails.Location = new System.Drawing.Point(356, 185);
-            this.btn_ViewDetails.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btn_ViewDetails.Location = new System.Drawing.Point(267, 148);
+            this.btn_ViewDetails.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.btn_ViewDetails.Name = "btn_ViewDetails";
-            this.btn_ViewDetails.Size = new System.Drawing.Size(66, 66);
+            this.btn_ViewDetails.Size = new System.Drawing.Size(50, 69);
             this.btn_ViewDetails.TabIndex = 5;
             this.btn_ViewDetails.UseVisualStyleBackColor = true;
             this.btn_ViewDetails.Click += new System.EventHandler(this.btn_ViewDetails_Click);
@@ -192,9 +202,10 @@
             this.btn_Reload.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Reload.ForeColor = System.Drawing.Color.Black;
             this.btn_Reload.Image = global::SieuThiMini.Properties.Resources.refresh;
-            this.btn_Reload.Location = new System.Drawing.Point(92, 182);
+            this.btn_Reload.Location = new System.Drawing.Point(69, 146);
+            this.btn_Reload.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btn_Reload.Name = "btn_Reload";
-            this.btn_Reload.Size = new System.Drawing.Size(200, 66);
+            this.btn_Reload.Size = new System.Drawing.Size(150, 72);
             this.btn_Reload.TabIndex = 4;
             this.btn_Reload.Text = "Tải lại";
             this.btn_Reload.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -208,9 +219,10 @@
             this.findDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.findDate.ForeColor = System.Drawing.Color.Black;
             this.findDate.Image = global::SieuThiMini.Properties.Resources.find;
-            this.findDate.Location = new System.Drawing.Point(1867, 44);
+            this.findDate.Location = new System.Drawing.Point(1400, 35);
+            this.findDate.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.findDate.Name = "findDate";
-            this.findDate.Size = new System.Drawing.Size(106, 103);
+            this.findDate.Size = new System.Drawing.Size(80, 82);
             this.findDate.TabIndex = 3;
             this.findDate.UseVisualStyleBackColor = true;
             this.findDate.Click += new System.EventHandler(this.findDate_Click);
@@ -219,26 +231,20 @@
             // 
             this.grid_DSHoaDon.BackgroundColor = System.Drawing.Color.Azure;
             this.grid_DSHoaDon.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.grid_DSHoaDon.Location = new System.Drawing.Point(92, 278);
+            this.grid_DSHoaDon.Location = new System.Drawing.Point(69, 222);
+            this.grid_DSHoaDon.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.grid_DSHoaDon.Name = "grid_DSHoaDon";
             this.grid_DSHoaDon.RowHeadersWidth = 82;
             this.grid_DSHoaDon.RowTemplate.Height = 33;
-            this.grid_DSHoaDon.Size = new System.Drawing.Size(1880, 1072);
+            this.grid_DSHoaDon.Size = new System.Drawing.Size(1410, 858);
             this.grid_DSHoaDon.TabIndex = 9;
-            // 
-            // DSHoaDon
-            // 
-            this.DSHoaDon.DeleteCommand = null;
-            this.DSHoaDon.InsertCommand = null;
-            this.DSHoaDon.SelectCommand = null;
-            this.DSHoaDon.UpdateCommand = null;
             // 
             // HoaDon
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DodgerBlue;
-            this.ClientSize = new System.Drawing.Size(2068, 1362);
+            this.ClientSize = new System.Drawing.Size(1443, 840);
             this.Controls.Add(this.grid_DSHoaDon);
             this.Controls.Add(this.btn_Remove);
             this.Controls.Add(this.btn_Restore);
@@ -250,6 +256,7 @@
             this.Controls.Add(this.Date_start);
             this.Controls.Add(this.TimKiem);
             this.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "HoaDon";
             this.Text = "HoaDon";
             this.Load += new System.EventHandler(this.HoaDon_Load);

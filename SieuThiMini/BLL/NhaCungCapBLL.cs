@@ -28,7 +28,7 @@ namespace SieuThiMini.BLL
             dal.Insert(target);
         }
 
-        public void Restore(string id)
+        public void Restore(int id)
         {
             dal.Restore(id);
         }
@@ -38,12 +38,12 @@ namespace SieuThiMini.BLL
             dal.Update(target);
         }
 
-        public void Delete(string id)
+        public void Delete(int id)
         {
             dal.Delete(id);
         }
 
-        public List<NhaCungCapDTO> GetNCCByMaNCC(string id)
+        public List<NhaCungCapDTO> GetNCCByMaNCC(int id)
         {
             return dal.GetNCCByMaNCC(id);
         }

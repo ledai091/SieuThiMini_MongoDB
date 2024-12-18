@@ -12,10 +12,6 @@ namespace SieuThiMini.GUI
 {
     public partial class ThemDonNhapHang : Form
     {
-        private readonly SanPhamBLL sanPhamBLL = new SanPhamBLL();
-        private readonly NhaCungCapBLL nhaCungCapBLL = new NhaCungCapBLL();
-        private readonly DonNhapHangBLL donNhapHangBLL = new DonNhapHangBLL();
-        private readonly CTDonNhapHangBLL ctDonNhapHangBLL = new CTDonNhapHangBLL();
         private readonly int maNV;
 
         public ThemDonNhapHang(int maNV)
@@ -47,12 +43,12 @@ namespace SieuThiMini.GUI
 
         private void InitializeGridDonNhapHang()
         {
-            grid_DonNhapHang.Columns.Clear();
             grid_DonNhapHang.Columns.Add("ma_san_pham", "Mã sản phẩm");
             grid_DonNhapHang.Columns.Add("ten_san_pham", "Tên sản phẩm");
             grid_DonNhapHang.Columns.Add("so_luong", "Số lượng");
             grid_DonNhapHang.Columns.Add("gia", "Giá");
             grid_DonNhapHang.Columns.Add("thanh_tien", "Thành tiền");
+
         }
 
         private void btn_Them_Click(object sender, EventArgs e)
@@ -66,11 +62,12 @@ namespace SieuThiMini.GUI
             cbo_NCC.Enabled = false;
             var selectedRow = grid_SanPham.CurrentRow;
 
-            int maSanPham = Convert.ToInt32(selectedRow.Cells["ma_san_pham"].Value);
-            string tenSanPham = selectedRow.Cells["ten_san_pham"].Value.ToString();
+            int maSanPham = Convert.ToInt32(selectedRow.Cells["MaSanPham"].Value);
+            string tenSanPham = selectedRow.Cells["TenSanPham"].Value.ToString();
+            int giaNhap = Convert.ToInt32(selectedRow.Cells["GiaNhap"].Value);
+
             int soLuong = (int)ud_SoLuong.Value;
-            decimal giaNhap = Convert.ToDecimal(selectedRow.Cells["gia_nhap"].Value);
-            decimal thanhTien = soLuong * giaNhap;
+            int thanhTien = soLuong * giaNhap;
 
             foreach (DataGridViewRow row in grid_DonNhapHang.Rows)
             {
@@ -96,6 +93,8 @@ namespace SieuThiMini.GUI
 
         private void cbo_NCC_SelectedIndexChanged(object sender, EventArgs e)
         {
+            NhaCungCapBLL nhaCungCapBLL = new NhaCungCapBLL();
+            SanPhamBLL sanPhamBLL = new SanPhamBLL();
             if (cbo_NCC.SelectedIndex == 0)
             {
                 grid_SanPham.DataSource = new List<SanPhamDTO>();
@@ -109,6 +108,12 @@ namespace SieuThiMini.GUI
             {
                 var sanPhamList = sanPhamBLL.GetSPByLoaiSP(nhaCungCap.MaNhaCungCap);
                 grid_SanPham.DataSource = sanPhamList;
+
+                // Hide the Id column after the DataSource is assigned
+                if (grid_SanPham.Columns["Id"] != null)
+                {
+                    grid_SanPham.Columns["Id"].Visible = false;
+                }
             }
         }
 
@@ -132,6 +137,10 @@ namespace SieuThiMini.GUI
 
         private void btn_ThanhToan_Click(object sender, EventArgs e)
         {
+            CTDonNhapHangBLL ctDonNhapHangBLL = new CTDonNhapHangBLL();
+            NhaCungCapBLL nhaCungCapBLL = new NhaCungCapBLL();
+            DonNhapHangBLL donNhapHangBLL = new DonNhapHangBLL();
+            SanPhamBLL sanPhamBLL = new SanPhamBLL();
             if (grid_DonNhapHang.Rows.Count == 0)
             {
                 MessageBox.Show("Chưa chọn sản phẩm!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -153,18 +162,26 @@ namespace SieuThiMini.GUI
                 return;
             }
 
+            List<DonNhapHangDTO> listDTO = donNhapHangBLL.GetList();
             DateTime ngayNhap = DateTime.Now;
             decimal tongTien = decimal.Parse(label_TT.Text);
-            var donNhapHang = new DonNhapHangDTO(0, nhaCungCap.MaNhaCungCap, maNV, ngayNhap, (int)tongTien, 1);
+            var donNhapHang = new DonNhapHangDTO(listDTO.Count + 1, nhaCungCap.MaNhaCungCap, maNV, ngayNhap, (int)tongTien, 1);
             donNhapHangBLL.Insert(donNhapHang);
 
             foreach (DataGridViewRow row in grid_DonNhapHang.Rows)
             {
+
+                // Skip empty rows
+                if (row.IsNewRow) continue;
+
                 int maSP = Convert.ToInt32(row.Cells["ma_san_pham"].Value);
-                string tenSP = row.Cells["ten_san_pham"].Value.ToString();
+
+                // Add a null check for "ten_san_pham"
+                string tenSP = row.Cells["ten_san_pham"].Value?.ToString() ?? string.Empty;
+
                 int soLuong = Convert.ToInt32(row.Cells["so_luong"].Value);
-                decimal gia = Convert.ToDecimal(row.Cells["gia"].Value);
-                decimal thanhTien = Convert.ToDecimal(row.Cells["thanh_tien"].Value);
+                int gia = Convert.ToInt32(row.Cells["gia"].Value);
+                int thanhTien = Convert.ToInt32(row.Cells["thanh_tien"].Value);
 
                 var chiTietDonNhap = new CTDonNhapHangDTO(donNhapHang.MaDonNhapHang, maSP, tenSP, soLuong, (int)gia, (int)thanhTien);
                 ctDonNhapHangBLL.Insert(chiTietDonNhap);

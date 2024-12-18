@@ -25,7 +25,7 @@ namespace SieuThiMini.DAL
 
         public List<NhaCungCapDTO> SelectAllDeleted()
         {
-            var filter = Builders<BsonDocument>.Filter.Eq("trang_thai", "0");
+            var filter = Builders<BsonDocument>.Filter.Eq("trang_thai", 0);
             var documents = _collection.Find(filter).ToList();
             return MapToDTOList(documents);
         }
@@ -35,38 +35,39 @@ namespace SieuThiMini.DAL
             var document = new BsonDocument
             {
                 { "ten_ncc", target.TenNhaCungCap },
+                { "ma_ncc", target.MaNhaCungCap },
                 { "dia_chi", target.DiaChi },
-                { "trang_thai", "1" }
+                { "trang_thai", 1}
             };
             _collection.InsertOne(document);
         }
 
         public void Update(NhaCungCapDTO target)
         {
-            var filter = Builders<BsonDocument>.Filter.Eq("_id", new ObjectId(target.Id));
+            var filter = Builders<BsonDocument>.Filter.Eq("ma_ncc", target.MaNhaCungCap);
             var update = Builders<BsonDocument>.Update
                 .Set("ten_ncc", target.TenNhaCungCap)
                 .Set("dia_chi", target.DiaChi);
             _collection.UpdateOne(filter, update);
         }
 
-        public void Delete(string id)
+        public void Delete(int id)
         {
-            var filter = Builders<BsonDocument>.Filter.Eq("_id", new ObjectId(id));
-            var update = Builders<BsonDocument>.Update.Set("trang_thai", "0");
+            var filter = Builders<BsonDocument>.Filter.Eq("ma_ncc", id);
+            var update = Builders<BsonDocument>.Update.Set("trang_thai", 0);
             _collection.UpdateOne(filter, update);
         }
 
-        public void Restore(string id)
+        public void Restore(int id)
         {
-            var filter = Builders<BsonDocument>.Filter.Eq("_id", new ObjectId(id));
-            var update = Builders<BsonDocument>.Update.Set("trang_thai", "1");
+            var filter = Builders<BsonDocument>.Filter.Eq("ma_ncc", id);
+            var update = Builders<BsonDocument>.Update.Set("trang_thai", 1);
             _collection.UpdateOne(filter, update);
         }
 
-        public List<NhaCungCapDTO> GetNCCByMaNCC(string id)
+        public List<NhaCungCapDTO> GetNCCByMaNCC(int id)
         {
-            var filter = Builders<BsonDocument>.Filter.Eq("_id", new ObjectId(id));
+            var filter = Builders<BsonDocument>.Filter.Eq("ma_ncc", id);
             var documents = _collection.Find(filter).ToList();
             return MapToDTOList(documents);
         }

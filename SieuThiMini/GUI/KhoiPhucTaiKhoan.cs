@@ -11,7 +11,7 @@ namespace SieuThiMini.GUI
     public partial class KhoiPhucTaiKhoan : Form
     {
         private readonly DataProvider dataProvider;
-        private readonly string collectionName = "TaiKhoan";
+        private readonly string collectionName = "tai_khoan";
 
         public KhoiPhucTaiKhoan()
         {
@@ -28,16 +28,16 @@ namespace SieuThiMini.GUI
         {
             try
             {
-                var filter = Builders<BsonDocument>.Filter.Eq("isDeleted", true);
+                var filter = Builders<BsonDocument>.Filter.Eq("trang_thai", 0);
                 var deletedAccounts = dataProvider.GetCollection(collectionName)
                                                    .Find(filter)
                                                    .ToList();
                 grid_TK.DataSource = deletedAccounts.Select(doc => new
                 {
-                    MaTaiKhoan = doc["_id"].ToString(),
-                    TenTaiKhoan = doc["tenTaiKhoan"].AsString,
-                    Quyen = doc["quyen"].AsInt32,
-                    TrangThai = doc["isDeleted"].AsBoolean ? "Đã xóa" : "Hoạt động"
+                    MaTaiKhoan = doc["ma_tai_khoan"].ToString(),
+                    TenTaiKhoan = doc["ten_tai_khoan"].AsString,
+                    Quyen = doc["phan_quyen"].AsInt32,
+                    TrangThai = doc["trang_thai"].AsInt32
                 }).ToList();
             }
             catch (Exception ex)
@@ -51,15 +51,15 @@ namespace SieuThiMini.GUI
             if (grid_TK.SelectedRows.Count > 0)
             {
                 var selectedRow = grid_TK.SelectedRows[0];
-                var accountId = selectedRow.Cells["MaTaiKhoan"].Value.ToString();
+                int accountId = Convert.ToInt32(selectedRow.Cells["MaTaiKhoan"].Value.ToString());
 
                 DialogResult result = MessageBox.Show("Khôi phục tài khoản này?", "Thông báo", MessageBoxButtons.YesNo);
                 if (result == DialogResult.Yes)
                 {
                     try
                     {
-                        var filter = Builders<BsonDocument>.Filter.Eq("_id", ObjectId.Parse(accountId));
-                        var update = Builders<BsonDocument>.Update.Set("isDeleted", false);
+                        var filter = Builders<BsonDocument>.Filter.Eq("ma_tai_khoan", accountId);
+                        var update = Builders<BsonDocument>.Update.Set("trang_thai", 1);
 
                         dataProvider.UpdateDocument(collectionName, filter, update);
                         MessageBox.Show("Khôi phục tài khoản thành công.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -88,8 +88,8 @@ namespace SieuThiMini.GUI
             try
             {
                 var filter = Builders<BsonDocument>.Filter.And(
-                    Builders<BsonDocument>.Filter.Eq("isDeleted", true),
-                    Builders<BsonDocument>.Filter.Regex("tenTaiKhoan", new BsonRegularExpression(textBox_TimTK.Text, "i"))
+                    Builders<BsonDocument>.Filter.Eq("trang_thai", 0),
+                    Builders<BsonDocument>.Filter.Regex("ten_tai_khoan", new BsonRegularExpression(textBox_TimTK.Text, "i"))
                 );
 
                 var filteredAccounts = dataProvider.GetCollection(collectionName)
@@ -98,10 +98,10 @@ namespace SieuThiMini.GUI
 
                 grid_TK.DataSource = filteredAccounts.Select(doc => new
                 {
-                    MaTaiKhoan = doc["_id"].ToString(),
-                    TenTaiKhoan = doc["tenTaiKhoan"].AsString,
-                    Quyen = doc["quyen"].AsInt32,
-                    TrangThai = doc["isDeleted"].AsBoolean ? "Đã xóa" : "Hoạt động"
+                    MaTaiKhoan = doc["ma_tai_khoan"].ToString(),
+                    TenTaiKhoan = doc["ten_tai_khoan"].AsString,
+                    Quyen = doc["phan_quyen"].AsInt32,
+                    TrangThai = doc["trang_thai"].AsInt32
                 }).ToList();
             }
             catch (Exception ex)

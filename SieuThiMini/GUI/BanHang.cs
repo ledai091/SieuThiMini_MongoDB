@@ -38,7 +38,8 @@ namespace SieuThiMini.GUI
             grid_SanPham.Columns["MaLoai"].Visible = false;
             grid_SanPham.Columns["TrangThai"].Visible = false;
             grid_SanPham.Columns["GiaNhap"].Visible = false;
-            grid_SanPham.CurrentCell.Selected = false;
+            grid_SanPham.Columns["Id"].Visible = false;
+            //grid_SanPham.CurrentCell.Selected = false;
             grid_SanPham.Columns["MaSanPham"].HeaderText = "Mã sản phẩm";
             grid_SanPham.Columns["TenSanPham"].HeaderText = "Tên sản phẩm";
             grid_SanPham.Columns["SoLuong"].HeaderText = "Số lượng";
@@ -53,6 +54,12 @@ namespace SieuThiMini.GUI
             grid_HoaDon.Columns["GiaSanPham"].HeaderText = "Giá";
             grid_HoaDon.Columns["ThanhTien"].HeaderText = "Thành tiền";
             grid_HoaDon.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+
+            NhanVienBLL nvBLL = new NhanVienBLL();
+            NhanVienDTO nv = nvBLL.GetNVByMaNV(maNV);
+            TenNV.Text = nv.TenNhanVien.ToString();
+            SDT_NV.Text = nv.SoDienThoai.ToString();
+            Email_NV.Text =(string)nv.Email;
         }
 
         public void update()
@@ -215,8 +222,10 @@ namespace SieuThiMini.GUI
                 return;
             }
             DateTime ngayXuat = DateTime.Now;
-            HoaDonDTO hdDTO = new HoaDonDTO(0, ngayXuat, maNV, Convert.ToInt32(label_TT.Text), 1);
             HoaDonBLL hdBLL = new HoaDonBLL();
+            List<HoaDonDTO> listDTO = hdBLL.GetList();
+            HoaDonDTO hdDTO = new HoaDonDTO(listDTO.Count+1, ngayXuat, maNV, Convert.ToInt32(label_TT.Text), 1);
+            
             hdBLL.Insert(hdDTO);
             List<HoaDonDTO> lhdDTO = hdBLL.GetList();
             HoaDonDTO hdDTO_l = lhdDTO[lhdDTO.Count - 1];
@@ -254,5 +263,73 @@ namespace SieuThiMini.GUI
             var filtered = dsSp.Where(x => x.TenSanPham.ToLower().Contains(input.ToLower())).ToList();
             grid_SanPham.DataSource = filtered;
         }
+
+        private void lb_tenNV_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_DangXuat_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            var formLogin = new LoginGUI();
+            formLogin.Closed += (s, args) => this.Close();
+            formLogin.Show();
+        }
+
+        private void ud_SoLuong_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void grid_HoaDon_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void grid_HoaDon_CellValueChanged(object sender, DataGridViewCellEventArgs e)
+        {
+            // Only proceed if the Số Lượng (SoLuong) column is changed
+            if (e.ColumnIndex == grid_HoaDon.Columns["SoLuong"].Index && e.RowIndex >= 0)
+            {
+                DataGridViewRow currentRow = grid_HoaDon.Rows[e.RowIndex];
+
+                // Find the corresponding product in grid_SanPham
+                int maSanPham = Convert.ToInt32(currentRow.Cells["MaSanPham"].Value);
+                DataGridViewRow productRow = grid_SanPham.Rows
+                    .Cast<DataGridViewRow>()
+                    .FirstOrDefault(row => Convert.ToInt32(row.Cells["MaSanPham"].Value) == maSanPham);
+
+                if (productRow != null)
+                {
+                    int maxAvailableQuantity = Convert.ToInt32(productRow.Cells["SoLuong"].Value);
+                    int currentQuantity = Convert.ToInt32(currentRow.Cells["SoLuong"].Value);
+                    decimal price = Convert.ToDecimal(currentRow.Cells["GiaSanPham"].Value);
+
+                    // Validate quantity
+                    if (currentQuantity <= 0)
+                    {
+                        // Remove the row if quantity is 0 or negative
+                        List<CTHoaDonDTO> dsCTHD = (List<CTHoaDonDTO>)grid_HoaDon.DataSource;
+                        dsCTHD.RemoveAll(x => x.MaSanPham == maSanPham);
+                        grid_HoaDon.DataSource = null;
+                        grid_HoaDon.DataSource = dsCTHD;
+                    }
+                    else if (currentQuantity > maxAvailableQuantity)
+                    {
+                        // Limit to maximum available quantity
+                        currentRow.Cells["SoLuong"].Value = maxAvailableQuantity;
+                        currentQuantity = maxAvailableQuantity;
+                    }
+
+                    // Update Thành Tiền (Total amount)
+                    currentRow.Cells["ThanhTien"].Value = currentQuantity * price;
+
+                    // Update total bill amount
+                    update_TT();
+                }
+            }
+        }
     }
 }
+

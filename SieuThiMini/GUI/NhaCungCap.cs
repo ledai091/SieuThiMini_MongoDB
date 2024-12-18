@@ -9,8 +9,6 @@ namespace SieuThiMini.GUI
 {
     public partial class NhaCungCap : Form
     {
-        private NhaCungCapBLL bll = new NhaCungCapBLL();
-
         public NhaCungCap()
         {
             InitializeComponent();
@@ -23,6 +21,7 @@ namespace SieuThiMini.GUI
 
         private void LoadDataGrid()
         {
+            NhaCungCapBLL bll = new NhaCungCapBLL();
             List<NhaCungCapDTO> nhaCungCapDTOs = bll.SelectAll();
             grid_NCC.DataSource = nhaCungCapDTOs;
 
@@ -83,6 +82,7 @@ namespace SieuThiMini.GUI
 
         private void btn_Save_Click(object sender, EventArgs e)
         {
+            NhaCungCapBLL bll = new NhaCungCapBLL();
             if (string.IsNullOrWhiteSpace(textBox_NCC.Text) || string.IsNullOrWhiteSpace(textBox_DiaChi.Text))
             {
                 MessageBox.Show("Vui lòng nhập đầy đủ thông tin!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -114,15 +114,16 @@ namespace SieuThiMini.GUI
 
         private void btn_XoaNCC_Click(object sender, EventArgs e)
         {
+            NhaCungCapBLL bll = new NhaCungCapBLL();
             if (string.IsNullOrWhiteSpace(textBox_MaNCC.Text))
             {
                 MessageBox.Show("Vui lòng chọn nhà cung cấp cần xóa!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
-            int maNCC = int.Parse(textBox_MaNCC.Text);
+            int maNCC = Convert.ToInt32(textBox_MaNCC.Text);
 
-            List<LoaiSanPhamDTO> list = new LoaiSanPhamBLL().GetLSPByNCC(maNCC.ToString());
+            List<LoaiSanPhamDTO> list = new LoaiSanPhamBLL().GetLSPByNCC(maNCC);
 
             if (list.Count > 0)
             {
@@ -130,7 +131,7 @@ namespace SieuThiMini.GUI
                 return;
             }
 
-            bll.Delete(maNCC.ToString());
+            bll.Delete(maNCC);
             MessageBox.Show("Xóa thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
             LoadDataGrid();
         }
@@ -148,6 +149,7 @@ namespace SieuThiMini.GUI
 
         private void textBox_TimNCC_TextChanged(object sender, EventArgs e)
         {
+            NhaCungCapBLL bll = new NhaCungCapBLL();
             string search = textBox_TimNCC.Text.ToLower();
 
             List<NhaCungCapDTO> nhaCungCapDTOs = bll.SelectAll();

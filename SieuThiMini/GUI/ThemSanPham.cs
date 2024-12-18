@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using System.Windows.Forms;
 using MongoDB.Bson;
@@ -38,6 +39,7 @@ namespace SieuThiMini.GUI
 
         private void btn_ThemSanPham_Click(object sender, EventArgs e)
         {
+            List<SanPhamDTO> listDTO = sanPhamBLL.GetList();
             string tenSP = textBox_TenSanPham.Text.Trim();
             string giaStr = textBox_Gia.Text.Trim();
             string giaNhapStr = textBox_GiaNhap.Text.Trim();
@@ -66,7 +68,7 @@ namespace SieuThiMini.GUI
             int maLoai = int.Parse(selectedLoai.Split(':')[0].Trim());
 
             var sanPham = new SanPhamDTO(
-                0,           // maSanPham, giá trị mặc định là 0 (MongoDB sẽ tự sinh ID)
+                listDTO.Count + 1,           // maSanPham, giá trị mặc định là 0 (MongoDB sẽ tự sinh ID)
                 tenSP,       // tenSanPham
                 soLuong,     // soLuong
                 gia,         // gia

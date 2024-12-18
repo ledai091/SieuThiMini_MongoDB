@@ -8,7 +8,6 @@ namespace SieuThiMini.GUI
 {
     public partial class ThemTaiKhoan : Form
     {
-        private TaiKhoanBLL taiKhoanBLL = new TaiKhoanBLL();
 
         public ThemTaiKhoan()
         {
@@ -32,6 +31,7 @@ namespace SieuThiMini.GUI
 
         private void btn_ThemTK_Click(object sender, EventArgs e)
         {
+            TaiKhoanBLL taiKhoanBLL = new TaiKhoanBLL();
             string tenTaiKhoan = textBox_TenTK.Text.Trim();
             string matKhau = textBox_MK.Text.Trim();
             int phanQuyen;
@@ -48,10 +48,10 @@ namespace SieuThiMini.GUI
                 MessageBox.Show("Phân quyền không hợp lệ!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
-
+            List<TaiKhoanDTO> taiKhoanDTOs = taiKhoanBLL.SelectAll();
             // Tạo đối tượng TaiKhoanDTO
             var taiKhoan = new TaiKhoanDTO(
-                0,                  // ma_tai_khoan (MongoDB sẽ tự sinh ID)
+                taiKhoanDTOs.Count + 1,                  // ma_tai_khoan 
                 tenTaiKhoan,        // ten_tai_khoan
                 matKhau,            // mat_khau
                 phanQuyen,          // phan_quyen

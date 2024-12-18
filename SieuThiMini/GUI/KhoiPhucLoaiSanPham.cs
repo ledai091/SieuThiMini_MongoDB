@@ -27,21 +27,22 @@ namespace SieuThiMini.GUI
             loaiSanPhamList = bll.GetListDeleted();
             grid_LoaiSanPham.DataSource = loaiSanPhamList;
 
-            grid_LoaiSanPham.Columns["Id"].HeaderText = "Mã Loại";
+            grid_LoaiSanPham.Columns["MaLoai"].HeaderText = "Mã Loại";
             grid_LoaiSanPham.Columns["MaNhaCungCap"].HeaderText = "Mã Nhà Cung Cấp";
             grid_LoaiSanPham.Columns["TenLoai"].HeaderText = "Tên Loại";
 
             grid_LoaiSanPham.ColumnHeadersDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
-            grid_LoaiSanPham.Columns["Id"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            grid_LoaiSanPham.Columns["MaLoai"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
             grid_LoaiSanPham.Columns["MaNhaCungCap"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
             grid_LoaiSanPham.Columns["TenLoai"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
 
-            grid_LoaiSanPham.Columns["Id"].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            grid_LoaiSanPham.Columns["MaLoai"].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
             grid_LoaiSanPham.Columns["MaNhaCungCap"].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
             grid_LoaiSanPham.Columns["TenLoai"].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
 
             // Ẩn các cột không cần thiết
-            grid_LoaiSanPham.Columns["TrangThai"].Visible = false;
+            grid_LoaiSanPham.Columns["TrangThai"].Visible = true;
+            grid_LoaiSanPham.Columns["Id"].Visible = false;
         }
 
         private void btn_Reload_Click(object sender, EventArgs e)
@@ -53,10 +54,15 @@ namespace SieuThiMini.GUI
         {
             if (grid_LoaiSanPham.SelectedRows.Count > 0)
             {
-                int selectedRowIndex = grid_LoaiSanPham.SelectedCells[0].RowIndex;
-                DataGridViewRow selectedRow = grid_LoaiSanPham.Rows[selectedRowIndex];
-                string id = selectedRow.Cells["Id"].Value.ToString();
+                DataGridViewRow selectedRow = grid_LoaiSanPham.SelectedRows[0];
+                // Ensure the Id column exists and has a value
+                if (selectedRow.Cells["MaLoai"] == null || selectedRow.Cells["MaLoai"].Value == null)
+                {
+                    MessageBox.Show("No Id found for the selected row.");
+                    return;
+                }
 
+                int id = Convert.ToInt32(selectedRow.Cells["MaLoai"].Value);
                 bll.Restore(id);
 
                 MessageBox.Show("Khôi phục thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -66,6 +72,7 @@ namespace SieuThiMini.GUI
             {
                 MessageBox.Show("Vui lòng chọn loại sản phẩm cần khôi phục", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
+
         }
 
         private void textBox_TimLoaiSanPham_TextChanged(object sender, EventArgs e)

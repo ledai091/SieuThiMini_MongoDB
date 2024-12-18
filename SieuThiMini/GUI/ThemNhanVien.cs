@@ -6,12 +6,12 @@ using SieuThiMini.DTO;
 using MongoDB.Driver;
 using MongoDB.Bson;
 using SieuThiMini.DAL;
+using System.Collections.Generic;
 
 namespace SieuThiMini.GUI
 {
     public partial class ThemNhanVien : Form
     {
-        private readonly NhanVienBLL nhanVienBLL = new NhanVienBLL();
 
         public ThemNhanVien()
         {
@@ -22,7 +22,7 @@ namespace SieuThiMini.GUI
         private void LoadTaiKhoan()
         {
             var collection = DataProvider.Instance.GetCollection("tai_khoan");
-            var taiKhoanList = collection.Find(Builders<BsonDocument>.Filter.Eq("trang_thai", "1")).ToList();
+            var taiKhoanList = collection.Find(Builders<BsonDocument>.Filter.Eq("trang_thai", 1)).ToList();
 
             cb_TK.Items.Clear();
             cb_TK.Items.Add("Chọn tài khoản");
@@ -41,6 +41,7 @@ namespace SieuThiMini.GUI
 
         private void btn_Save_Click(object sender, EventArgs e)
         {
+            NhanVienBLL nhanVienBLL = new NhanVienBLL();
             string tenNV = textBox_TenNV.Text.Trim();
             string sdt = textBox_SDT.Text.Trim();
             string mail = textBox_Email.Text.Trim();
@@ -66,9 +67,9 @@ namespace SieuThiMini.GUI
 
             string selectedTK = cb_TK.SelectedItem.ToString();
             int maTK = int.Parse(selectedTK.Split(':')[0].Trim());
-
+            List<NhanVienDTO> listDTO = nhanVienBLL.GetList();
             var nhanVien = new NhanVienDTO(
-                0, // Mã nhân viên được tự động sinh bởi MongoDB
+                listDTO.Count + 1, // Mã nhân viên được tự động sinh bởi MongoDB
                 tenNV,
                 birth,
                 sdt,
@@ -93,6 +94,11 @@ namespace SieuThiMini.GUI
         private void btn_Huy_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void cb_TK_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -41,12 +41,12 @@ namespace SieuThiMini.GUI
             foreach (var doc in documents)
             {
                 dataTable.Rows.Add(
-                    doc["ma_san_pham"].AsInt32,
+                    Convert.ToInt32(doc["ma_san_pham"]),
                     doc["ten_san_pham"].AsString,
                     doc["ma_loai"].AsInt32,
                     doc["so_luong"].AsInt32,
-                    doc["gia"].AsDouble,
-                    doc["gia_nhap"].AsDouble
+                    doc["gia"].AsInt32,
+                    doc["gia_nhap"].AsInt32
                 );
             }
 

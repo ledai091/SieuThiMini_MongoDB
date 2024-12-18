@@ -192,7 +192,7 @@ namespace SieuThiMini.GUI
             {
                 int selectedRowIndex = grid_DSHoaDon.SelectedCells[0].RowIndex;
                 DataGridViewRow selectedRow = grid_DSHoaDon.Rows[selectedRowIndex];
-                string maHD = selectedRow.Cells["MaHoaDon"].Value.ToString();
+                int maHD = Convert.ToInt32(selectedRow.Cells["MaHoaDon"].Value.ToString());
 
                 HoaDonBLL hdBLL = new HoaDonBLL();
                 hdBLL.Delete(maHD);

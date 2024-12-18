@@ -25,7 +25,7 @@ namespace SieuThiMini.DAL
 
         public List<DonNhapHangDTO> SelectAllDeleted()
         {
-            var filter = Builders<BsonDocument>.Filter.Eq("trang_thai", "0");
+            var filter = Builders<BsonDocument>.Filter.Eq("trang_thai", 0);
             var documents = _collection.Find(filter).ToList();
             return MapToDTOList(documents);
         }
@@ -44,21 +44,21 @@ namespace SieuThiMini.DAL
             _collection.InsertOne(document);
         }
 
-        public void Delete(string id)
+        public void Delete(int id)
         {
-            var filter = Builders<BsonDocument>.Filter.Eq("_id", ObjectId.Parse(id));
-            var update = Builders<BsonDocument>.Update.Set("trang_thai", "0");
+            var filter = Builders<BsonDocument>.Filter.Eq("ma_don_nh", id);
+            var update = Builders<BsonDocument>.Update.Set("trang_thai", 0);
             _collection.UpdateOne(filter, update);
         }
 
-        public void Restore(string id)
+        public void Restore(int id)
         {
-            var filter = Builders<BsonDocument>.Filter.Eq("_id", ObjectId.Parse(id));
-            var update = Builders<BsonDocument>.Update.Set("trang_thai", "1");
+            var filter = Builders<BsonDocument>.Filter.Eq("ma_don_nh", id);
+            var update = Builders<BsonDocument>.Update.Set("trang_thai", 1);
             _collection.UpdateOne(filter, update);
         }
 
-        public List<DonNhapHangDTO> GetDNHByMaDNH(string maDonNhapHang)
+        public List<DonNhapHangDTO> GetDNHByMaDNH(int maDonNhapHang)
         {
             var filter = Builders<BsonDocument>.Filter.Eq("ma_don_nh", maDonNhapHang);
             var documents = _collection.Find(filter).ToList();

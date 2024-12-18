@@ -45,7 +45,7 @@ namespace SieuThiMini.DAL
 
         public void Update(TaiKhoanDTO target)
         {
-            var filter = Builders<TaiKhoanDTO>.Filter.Eq("_id", ObjectId.Parse(target.Id));
+            var filter = Builders<TaiKhoanDTO>.Filter.Eq("MaTaiKhoan", target.MaTaiKhoan);
             var update = Builders<TaiKhoanDTO>.Update
                 .Set("TenTaiKhoan", target.TenTaiKhoan)
                 .Set("MatKhau", target.MatKhau)
@@ -56,8 +56,8 @@ namespace SieuThiMini.DAL
 
         public void Delete(int id)
         {
-            var filter = Builders<TaiKhoanDTO>.Filter.Eq("MaTaiKhoan", id);
-            var update = Builders<TaiKhoanDTO>.Update.Set("TrangThai", 0);
+            var filter = Builders<TaiKhoanDTO>.Filter.Eq("ma_tai_khoan", id);
+            var update = Builders<TaiKhoanDTO>.Update.Set("trang_thai", 0);
             _collection.UpdateOne(filter, update);
         }
 

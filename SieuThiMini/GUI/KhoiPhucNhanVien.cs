@@ -70,7 +70,7 @@ namespace SieuThiMini.GUI
             if (grid_NV.SelectedRows.Count > 0)
             {
                 // Lấy ID nhân viên được chọn để khôi phục
-                string selectedId = grid_NV.SelectedRows[0].Cells["Id"].Value.ToString();
+                int selectedId = Convert.ToInt32(grid_NV.SelectedRows[0].Cells["MaNhanVien"].Value.ToString());
 
                 DialogResult result = MessageBox.Show("Bạn có chắc chắn muốn khôi phục nhân viên này?",
                     "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);

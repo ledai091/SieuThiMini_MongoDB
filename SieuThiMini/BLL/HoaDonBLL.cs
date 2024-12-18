@@ -29,19 +29,19 @@ namespace SieuThiMini.BLL
             this.DAL.Insert(dto);
         }
 
-        public void Delete(string dtoId)
+        public void Delete(int dtoId)
         {
             this.DAL.Delete(dtoId);
         }
 
-        public void Restore(string mahoadon)
+        public void Restore(int mahoadon)
         {
             this.DAL.Restore(mahoadon);
         }
 
         public HoaDonDTO GetHDByMaHD(int ma_hoa_don)
         {
-            var result = this.DAL.GetHDByMaHD(ma_hoa_don.ToString());
+            var result = this.DAL.GetHDByMaHD(ma_hoa_don);
             return result.Count > 0 ? result[0] : null;
         }
     }

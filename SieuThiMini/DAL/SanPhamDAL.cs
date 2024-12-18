@@ -41,7 +41,7 @@ namespace SieuThiMini.DAL
 
         public void Update(SanPhamDTO target)
         {
-            var filter = Builders<BsonDocument>.Filter.Eq("_id", new ObjectId(target.Id));
+            var filter = Builders<BsonDocument>.Filter.Eq("ma_san_pham", target.MaSanPham);
             var update = Builders<BsonDocument>.Update
                 .Set("ten_san_pham", target.TenSanPham)
                 .Set("so_luong", target.SoLuong)
@@ -61,7 +61,7 @@ namespace SieuThiMini.DAL
         public int Delete(int id)
         {
             var filter = Builders<BsonDocument>.Filter.Eq("ma_san_pham", id);
-            var update = Builders<BsonDocument>.Update.Set("trang_thai", "0");
+            var update = Builders<BsonDocument>.Update.Set("trang_thai", 0);
             _collection.UpdateOne(filter, update);
             return 1; // Return success
         }
@@ -69,7 +69,7 @@ namespace SieuThiMini.DAL
         public int Restore(int id)
         {
             var filter = Builders<BsonDocument>.Filter.Eq("ma_san_pham", id);
-            var update = Builders<BsonDocument>.Update.Set("trang_thai", "1");
+            var update = Builders<BsonDocument>.Update.Set("trang_thai", 1);
             _collection.UpdateOne(filter, update);
             return 1; // Return success
         }
@@ -78,7 +78,7 @@ namespace SieuThiMini.DAL
         {
             var filter = Builders<BsonDocument>.Filter.And(
                 Builders<BsonDocument>.Filter.Eq("ma_loai", ma_loai),
-                Builders<BsonDocument>.Filter.Eq("trang_thai", "1")
+                Builders<BsonDocument>.Filter.Eq("trang_thai", 1)
             );
             var documents = _collection.Find(filter).ToList();
             return MapToDTOList(documents);

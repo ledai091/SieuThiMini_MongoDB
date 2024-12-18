@@ -58,9 +58,10 @@
             // 
             this.panel1.Controls.Add(this.label_HoTenNV);
             this.panel1.Controls.Add(this.pictureBox1);
-            this.panel1.Location = new System.Drawing.Point(12, 12);
+            this.panel1.Location = new System.Drawing.Point(9, 10);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(408, 132);
+            this.panel1.Size = new System.Drawing.Size(306, 106);
             this.panel1.TabIndex = 0;
             // 
             // label_HoTenNV
@@ -68,9 +69,10 @@
             this.label_HoTenNV.AutoSize = true;
             this.label_HoTenNV.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_HoTenNV.ForeColor = System.Drawing.Color.White;
-            this.label_HoTenNV.Location = new System.Drawing.Point(169, 55);
+            this.label_HoTenNV.Location = new System.Drawing.Point(127, 44);
+            this.label_HoTenNV.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label_HoTenNV.Name = "label_HoTenNV";
-            this.label_HoTenNV.Size = new System.Drawing.Size(148, 44);
+            this.label_HoTenNV.Size = new System.Drawing.Size(113, 32);
             this.label_HoTenNV.TabIndex = 1;
             this.label_HoTenNV.Text = "Họ Tên";
             this.label_HoTenNV.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -80,9 +82,10 @@
             this.pictureBox1.BackgroundImage = global::SieuThiMini.Properties.Resources.account;
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.pictureBox1.ErrorImage = null;
-            this.pictureBox1.Location = new System.Drawing.Point(57, 26);
+            this.pictureBox1.Location = new System.Drawing.Point(43, 21);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(92, 103);
+            this.pictureBox1.Size = new System.Drawing.Size(69, 82);
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
             // 
@@ -90,9 +93,10 @@
             // 
             this.panel2.Controls.Add(this.pictureBox2);
             this.panel2.Controls.Add(this.label1);
-            this.panel2.Location = new System.Drawing.Point(426, 12);
+            this.panel2.Location = new System.Drawing.Point(320, 10);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(2112, 132);
+            this.panel2.Size = new System.Drawing.Size(1584, 106);
             this.panel2.TabIndex = 2;
             // 
             // pictureBox2
@@ -100,9 +104,10 @@
             this.pictureBox2.BackgroundImage = global::SieuThiMini.Properties.Resources.logo;
             this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.pictureBox2.ErrorImage = null;
-            this.pictureBox2.Location = new System.Drawing.Point(781, 45);
+            this.pictureBox2.Location = new System.Drawing.Point(586, 36);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(60, 50);
+            this.pictureBox2.Size = new System.Drawing.Size(45, 40);
             this.pictureBox2.TabIndex = 2;
             this.pictureBox2.TabStop = false;
             // 
@@ -112,9 +117,10 @@
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.label1.Location = new System.Drawing.Point(847, 32);
+            this.label1.Location = new System.Drawing.Point(635, 26);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(628, 73);
+            this.label1.Size = new System.Drawing.Size(474, 55);
             this.label1.TabIndex = 1;
             this.label1.Text = "Quản lý siêu thị mini";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -124,9 +130,10 @@
             this.btn_DangXuat.BackColor = System.Drawing.Color.Azure;
             this.btn_DangXuat.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_DangXuat.Image = global::SieuThiMini.Properties.Resources.logout;
-            this.btn_DangXuat.Location = new System.Drawing.Point(12, 1344);
+            this.btn_DangXuat.Location = new System.Drawing.Point(9, 1075);
+            this.btn_DangXuat.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btn_DangXuat.Name = "btn_DangXuat";
-            this.btn_DangXuat.Size = new System.Drawing.Size(408, 118);
+            this.btn_DangXuat.Size = new System.Drawing.Size(306, 94);
             this.btn_DangXuat.TabIndex = 10;
             this.btn_DangXuat.Text = "Đăng xuất";
             this.btn_DangXuat.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -141,9 +148,10 @@
             this.btn_TaiKhoan.Image = global::SieuThiMini.Properties.Resources.taikhoan;
             this.btn_TaiKhoan.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_TaiKhoan.Location = new System.Drawing.Point(0, 0);
+            this.btn_TaiKhoan.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btn_TaiKhoan.Name = "btn_TaiKhoan";
-            this.btn_TaiKhoan.Padding = new System.Windows.Forms.Padding(32, 0, 0, 0);
-            this.btn_TaiKhoan.Size = new System.Drawing.Size(408, 118);
+            this.btn_TaiKhoan.Padding = new System.Windows.Forms.Padding(24, 0, 0, 0);
+            this.btn_TaiKhoan.Size = new System.Drawing.Size(306, 94);
             this.btn_TaiKhoan.TabIndex = 9;
             this.btn_TaiKhoan.Text = "Tài khoản";
             this.btn_TaiKhoan.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -158,9 +166,10 @@
             this.btn_NhanVien.Image = global::SieuThiMini.Properties.Resources.account1;
             this.btn_NhanVien.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_NhanVien.Location = new System.Drawing.Point(0, 0);
+            this.btn_NhanVien.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btn_NhanVien.Name = "btn_NhanVien";
-            this.btn_NhanVien.Padding = new System.Windows.Forms.Padding(32, 0, 0, 0);
-            this.btn_NhanVien.Size = new System.Drawing.Size(408, 118);
+            this.btn_NhanVien.Padding = new System.Windows.Forms.Padding(24, 0, 0, 0);
+            this.btn_NhanVien.Size = new System.Drawing.Size(306, 94);
             this.btn_NhanVien.TabIndex = 8;
             this.btn_NhanVien.Text = "Nhân viên";
             this.btn_NhanVien.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -174,10 +183,11 @@
             this.btn_ThongKe.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_ThongKe.Image = global::SieuThiMini.Properties.Resources.thongke;
             this.btn_ThongKe.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_ThongKe.Location = new System.Drawing.Point(12, 770);
+            this.btn_ThongKe.Location = new System.Drawing.Point(9, 616);
+            this.btn_ThongKe.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btn_ThongKe.Name = "btn_ThongKe";
-            this.btn_ThongKe.Padding = new System.Windows.Forms.Padding(32, 0, 0, 0);
-            this.btn_ThongKe.Size = new System.Drawing.Size(408, 118);
+            this.btn_ThongKe.Padding = new System.Windows.Forms.Padding(24, 0, 0, 0);
+            this.btn_ThongKe.Size = new System.Drawing.Size(306, 94);
             this.btn_ThongKe.TabIndex = 7;
             this.btn_ThongKe.Text = "Thống kê";
             this.btn_ThongKe.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -191,10 +201,11 @@
             this.btn_HoaDon.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_HoaDon.Image = global::SieuThiMini.Properties.Resources.hoadon;
             this.btn_HoaDon.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_HoaDon.Location = new System.Drawing.Point(12, 646);
+            this.btn_HoaDon.Location = new System.Drawing.Point(9, 517);
+            this.btn_HoaDon.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btn_HoaDon.Name = "btn_HoaDon";
-            this.btn_HoaDon.Padding = new System.Windows.Forms.Padding(32, 0, 0, 0);
-            this.btn_HoaDon.Size = new System.Drawing.Size(408, 118);
+            this.btn_HoaDon.Padding = new System.Windows.Forms.Padding(24, 0, 0, 0);
+            this.btn_HoaDon.Size = new System.Drawing.Size(306, 94);
             this.btn_HoaDon.TabIndex = 6;
             this.btn_HoaDon.Text = "Hóa đơn";
             this.btn_HoaDon.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -208,10 +219,11 @@
             this.btn_NhaCungCap.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_NhaCungCap.Image = global::SieuThiMini.Properties.Resources.nhacungcap;
             this.btn_NhaCungCap.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_NhaCungCap.Location = new System.Drawing.Point(12, 522);
+            this.btn_NhaCungCap.Location = new System.Drawing.Point(9, 418);
+            this.btn_NhaCungCap.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btn_NhaCungCap.Name = "btn_NhaCungCap";
-            this.btn_NhaCungCap.Padding = new System.Windows.Forms.Padding(32, 0, 0, 0);
-            this.btn_NhaCungCap.Size = new System.Drawing.Size(408, 118);
+            this.btn_NhaCungCap.Padding = new System.Windows.Forms.Padding(24, 0, 0, 0);
+            this.btn_NhaCungCap.Size = new System.Drawing.Size(306, 94);
             this.btn_NhaCungCap.TabIndex = 5;
             this.btn_NhaCungCap.Text = "Nhà cung cấp";
             this.btn_NhaCungCap.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -225,10 +237,11 @@
             this.btn_DonNhapHang.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_DonNhapHang.Image = global::SieuThiMini.Properties.Resources.donnhaphang;
             this.btn_DonNhapHang.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_DonNhapHang.Location = new System.Drawing.Point(12, 398);
+            this.btn_DonNhapHang.Location = new System.Drawing.Point(9, 318);
+            this.btn_DonNhapHang.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btn_DonNhapHang.Name = "btn_DonNhapHang";
-            this.btn_DonNhapHang.Padding = new System.Windows.Forms.Padding(32, 0, 0, 0);
-            this.btn_DonNhapHang.Size = new System.Drawing.Size(408, 118);
+            this.btn_DonNhapHang.Padding = new System.Windows.Forms.Padding(24, 0, 0, 0);
+            this.btn_DonNhapHang.Size = new System.Drawing.Size(306, 94);
             this.btn_DonNhapHang.TabIndex = 4;
             this.btn_DonNhapHang.Text = "Đơn nhập hàng";
             this.btn_DonNhapHang.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -242,10 +255,11 @@
             this.btn_LoaiSanPham.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_LoaiSanPham.Image = global::SieuThiMini.Properties.Resources.loaisanpham;
             this.btn_LoaiSanPham.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_LoaiSanPham.Location = new System.Drawing.Point(12, 274);
+            this.btn_LoaiSanPham.Location = new System.Drawing.Point(9, 219);
+            this.btn_LoaiSanPham.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btn_LoaiSanPham.Name = "btn_LoaiSanPham";
-            this.btn_LoaiSanPham.Padding = new System.Windows.Forms.Padding(32, 0, 0, 0);
-            this.btn_LoaiSanPham.Size = new System.Drawing.Size(408, 118);
+            this.btn_LoaiSanPham.Padding = new System.Windows.Forms.Padding(24, 0, 0, 0);
+            this.btn_LoaiSanPham.Size = new System.Drawing.Size(306, 94);
             this.btn_LoaiSanPham.TabIndex = 3;
             this.btn_LoaiSanPham.Text = "Loại sản phẩm";
             this.btn_LoaiSanPham.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -259,10 +273,11 @@
             this.btn_SanPham.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_SanPham.Image = global::SieuThiMini.Properties.Resources.sanpham2;
             this.btn_SanPham.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_SanPham.Location = new System.Drawing.Point(12, 150);
+            this.btn_SanPham.Location = new System.Drawing.Point(9, 120);
+            this.btn_SanPham.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btn_SanPham.Name = "btn_SanPham";
-            this.btn_SanPham.Padding = new System.Windows.Forms.Padding(32, 0, 0, 0);
-            this.btn_SanPham.Size = new System.Drawing.Size(408, 118);
+            this.btn_SanPham.Padding = new System.Windows.Forms.Padding(24, 0, 0, 0);
+            this.btn_SanPham.Size = new System.Drawing.Size(306, 94);
             this.btn_SanPham.TabIndex = 2;
             this.btn_SanPham.Text = "Sản phẩm";
             this.btn_SanPham.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -276,37 +291,40 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel_Body.AutoSize = true;
             this.panel_Body.BackColor = System.Drawing.Color.DodgerBlue;
-            this.panel_Body.Location = new System.Drawing.Point(426, 150);
+            this.panel_Body.Location = new System.Drawing.Point(320, 120);
+            this.panel_Body.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel_Body.Name = "panel_Body";
-            this.panel_Body.Size = new System.Drawing.Size(2112, 1312);
+            this.panel_Body.Size = new System.Drawing.Size(2045, 1050);
             this.panel_Body.TabIndex = 11;
             // 
             // panel_NhanVien
             // 
             this.panel_NhanVien.BackColor = System.Drawing.Color.Navy;
             this.panel_NhanVien.Controls.Add(this.btn_NhanVien);
-            this.panel_NhanVien.Location = new System.Drawing.Point(12, 894);
+            this.panel_NhanVien.Location = new System.Drawing.Point(9, 715);
+            this.panel_NhanVien.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel_NhanVien.Name = "panel_NhanVien";
-            this.panel_NhanVien.Size = new System.Drawing.Size(408, 118);
+            this.panel_NhanVien.Size = new System.Drawing.Size(306, 94);
             this.panel_NhanVien.TabIndex = 0;
             // 
             // panel_TaiKhoan
             // 
             this.panel_TaiKhoan.BackColor = System.Drawing.Color.Navy;
             this.panel_TaiKhoan.Controls.Add(this.btn_TaiKhoan);
-            this.panel_TaiKhoan.Location = new System.Drawing.Point(12, 1018);
+            this.panel_TaiKhoan.Location = new System.Drawing.Point(9, 814);
+            this.panel_TaiKhoan.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel_TaiKhoan.Name = "panel_TaiKhoan";
-            this.panel_TaiKhoan.Size = new System.Drawing.Size(408, 118);
+            this.panel_TaiKhoan.Size = new System.Drawing.Size(306, 94);
             this.panel_TaiKhoan.TabIndex = 9;
             // 
             // QuanLy
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.AutoSize = true;
             this.BackColor = System.Drawing.Color.Navy;
-            this.ClientSize = new System.Drawing.Size(2552, 1502);
+            this.ClientSize = new System.Drawing.Size(1560, 1050);
             this.Controls.Add(this.panel_TaiKhoan);
             this.Controls.Add(this.panel_NhanVien);
             this.Controls.Add(this.panel_Body);
@@ -319,6 +337,7 @@
             this.Controls.Add(this.btn_LoaiSanPham);
             this.Controls.Add(this.btn_SanPham);
             this.Controls.Add(this.panel1);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "QuanLy";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Quản lý siêu thị mini";

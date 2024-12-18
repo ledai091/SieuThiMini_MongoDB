@@ -45,19 +45,20 @@ namespace SieuThiMini.GUI
 
             grid_DNHDeleted.DataSource = danhSachDonNhapHang;
 
-            grid_DNHDeleted.Columns["ma_don_nh"].HeaderText = "Mã Đơn Nhập";
-            grid_DNHDeleted.Columns["ma_ncc"].HeaderText = "Mã Nhà Cung Cấp";
-            grid_DNHDeleted.Columns["ma_nhan_vien"].HeaderText = "Mã Nhân Viên";
-            grid_DNHDeleted.Columns["ngay_nhap"].HeaderText = "Ngày Nhập";
-            grid_DNHDeleted.Columns["tong_tien_nhap"].HeaderText = "Tổng Tiền Nhập";
-            grid_DNHDeleted.Columns["trang_thai"].HeaderText = "Trạng Thái";
+            grid_DNHDeleted.Columns["MaDonNhapHang"].HeaderText = "Mã Đơn Nhập";
+            grid_DNHDeleted.Columns["MaNhaCungCap"].HeaderText = "Mã Nhà Cung Cấp";
+            grid_DNHDeleted.Columns["MaNhanVien"].HeaderText = "Mã Nhân Viên";
+            grid_DNHDeleted.Columns["NgayNhap"].HeaderText = "Ngày Nhập";
+            grid_DNHDeleted.Columns["TongTienNhap"].HeaderText = "Tổng Tiền Nhập";
+            grid_DNHDeleted.Columns["TrangThai"].HeaderText = "Trạng Thái";
 
-            grid_DNHDeleted.Columns["ma_don_nh"].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-            grid_DNHDeleted.Columns["ma_ncc"].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-            grid_DNHDeleted.Columns["ma_nhan_vien"].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-            grid_DNHDeleted.Columns["ngay_nhap"].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-            grid_DNHDeleted.Columns["tong_tien_nhap"].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-            grid_DNHDeleted.Columns["trang_thai"].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            grid_DNHDeleted.Columns["MaDonNhapHang"].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            grid_DNHDeleted.Columns["MaNhaCungCap"].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            grid_DNHDeleted.Columns["MaNhanVien"].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            grid_DNHDeleted.Columns["NgayNhap"].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            grid_DNHDeleted.Columns["TongTienNhap"].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            grid_DNHDeleted.Columns["TrangThai"].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            grid_DNHDeleted.Columns["Id"].Visible = false;
 
         }
 
@@ -67,7 +68,7 @@ namespace SieuThiMini.GUI
             {
                 int selectedRowIndex = grid_DNHDeleted.SelectedCells[0].RowIndex;
                 DataGridViewRow selectedRow = grid_DNHDeleted.Rows[selectedRowIndex];
-                string maDNH = selectedRow.Cells["ma_don_nh"].Value.ToString();
+                int maDNH = Convert.ToInt32(selectedRow.Cells["MaDonNhapHang"].Value.ToString());
                 DonNhapHangBLL donNhapHangBLL = new DonNhapHangBLL();
                 donNhapHangBLL.Restore(maDNH);
 

@@ -9,9 +9,9 @@ namespace SieuThiMini.GUI
 {
     public partial class CTDonNhapHang : Form
     {
-        private string maDonNhapHang;
+        private int maDonNhapHang;
 
-        public CTDonNhapHang(string ma)
+        public CTDonNhapHang(int ma)
         {
             InitializeComponent();
             this.maDonNhapHang = ma;

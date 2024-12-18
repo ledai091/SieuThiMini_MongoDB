@@ -28,17 +28,17 @@ namespace SieuThiMini.BLL
             dal.Insert(dto);
         }
 
-        public void Restore(string id)
+        public void Restore(int id)
         {
             dal.Restore(id);
         }
 
-        public void Delete(string id)
+        public void Delete(int id)
         {
             dal.Delete(id);
         }
 
-        public DonNhapHangDTO GetDNHByMaDNH(string maDonNhapHang)
+        public DonNhapHangDTO GetDNHByMaDNH(int maDonNhapHang)
         {
             var result = dal.GetDNHByMaDNH(maDonNhapHang);
             return result.Count > 0 ? result[0] : null;

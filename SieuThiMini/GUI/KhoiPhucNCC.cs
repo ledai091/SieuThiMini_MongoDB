@@ -20,15 +20,15 @@ namespace SieuThiMini.GUI
 
             grid_NCC.DataSource = list;
 
-            grid_NCC.Columns["ma_ncc"].HeaderText = "Mã nhà cung cấp";
-            grid_NCC.Columns["ten_ncc"].HeaderText = "Tên nhà cung cấp";
-            grid_NCC.Columns["dia_chi"].HeaderText = "Địa chỉ";
-            grid_NCC.Columns["trang_thai"].HeaderText = "Trạng thái";
+            grid_NCC.Columns["MaNhaCungCap"].HeaderText = "Mã nhà cung cấp";
+            grid_NCC.Columns["TenNhaCungCap"].HeaderText = "Tên nhà cung cấp";
+            grid_NCC.Columns["DiaChi"].HeaderText = "Địa chỉ";
+            grid_NCC.Columns["TrangThai"].HeaderText = "Trạng thái";
 
-            grid_NCC.Columns["ma_ncc"].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-            grid_NCC.Columns["ten_ncc"].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-            grid_NCC.Columns["dia_chi"].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-            grid_NCC.Columns["trang_thai"].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            grid_NCC.Columns["MaNhaCungCap"].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            grid_NCC.Columns["TenNhaCungCap"].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            grid_NCC.Columns["DiaChi"].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            grid_NCC.Columns["TrangThai"].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
         }
 
         private void btn_KhoiPhuc_Click(object sender, EventArgs e)
@@ -38,9 +38,10 @@ namespace SieuThiMini.GUI
                 int selectedRowIndex = grid_NCC.SelectedRows[0].Index;
                 DataGridViewRow selectedRow = grid_NCC.Rows[selectedRowIndex];
 
-                int macc = Convert.ToInt32(selectedRow.Cells["ma_ncc"].Value.ToString());
+                int macc = Convert.ToInt32(selectedRow.Cells["MaNhaCungCap"].Value);
+
                 NhaCungCapBLL bll = new NhaCungCapBLL();
-                bll.Restore(macc.ToString());
+                bll.Restore(macc);
                 var dataGridArgs = new DataGridViewCellEventArgs(0, 0);
                 btn_Reload_Click(null, dataGridArgs);
             }

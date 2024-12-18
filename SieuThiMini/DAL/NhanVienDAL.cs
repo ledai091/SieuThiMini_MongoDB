@@ -31,7 +31,7 @@ namespace SieuThiMini.DAL
 
         public List<NhanVienDTO> GetDeletedNhanVien()
         {
-            var filter = Builders<BsonDocument>.Filter.Eq("trang_thai", "0");
+            var filter = Builders<BsonDocument>.Filter.Eq("trang_thai", 0);
             var documents = _collection.Find(filter).ToList();
             return MapToDTOList(documents);
         }
@@ -39,7 +39,7 @@ namespace SieuThiMini.DAL
         public List<NhanVienDTO> GetDeletedNhanVienByKey(string key)
         {
             var filter = Builders<BsonDocument>.Filter.And(
-                Builders<BsonDocument>.Filter.Eq("trang_thai", "0"),
+                Builders<BsonDocument>.Filter.Eq("trang_thai", 0),
                 Builders<BsonDocument>.Filter.Or(
                     Builders<BsonDocument>.Filter.Regex("ma_nhan_vien", new BsonRegularExpression(key, "i")),
                     Builders<BsonDocument>.Filter.Regex("ten_nhan_vien", new BsonRegularExpression(key, "i"))
@@ -59,7 +59,7 @@ namespace SieuThiMini.DAL
                 { "sdt", target.SoDienThoai },
                 { "mail", target.Email },
                 { "tai_khoan", target.TaiKhoan },
-                { "trang_thai", "1" }
+                { "trang_thai", 1 }
             };
             _collection.InsertOne(document);
         }
@@ -76,17 +76,17 @@ namespace SieuThiMini.DAL
             _collection.UpdateOne(filter, update);
         }
 
-        public void Delete(string id)
+        public void Delete(int id)
         {
-            var filter = Builders<BsonDocument>.Filter.Eq("_id", new ObjectId(id));
-            var update = Builders<BsonDocument>.Update.Set("trang_thai", "0");
+            var filter = Builders<BsonDocument>.Filter.Eq("ma_nhan_vien", id);
+            var update = Builders<BsonDocument>.Update.Set("trang_thai", 0);
             _collection.UpdateOne(filter, update);
         }
 
-        public void Restore(string id)
+        public void Restore(int id)
         {
-            var filter = Builders<BsonDocument>.Filter.Eq("_id", new ObjectId(id));
-            var update = Builders<BsonDocument>.Update.Set("trang_thai", "1");
+            var filter = Builders<BsonDocument>.Filter.Eq("ma_nhan_vien", id);
+            var update = Builders<BsonDocument>.Update.Set("trang_thai", 1);
             _collection.UpdateOne(filter, update);
         }
 

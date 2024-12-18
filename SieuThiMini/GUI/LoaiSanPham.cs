@@ -11,7 +11,6 @@ namespace SieuThiMini.GUI
 {
     public partial class LoaiSanPham : Form
     {
-        LoaiSanPhamBLL bll = new LoaiSanPhamBLL();
         public LoaiSanPham()
         {
             InitializeComponent();
@@ -31,12 +30,27 @@ namespace SieuThiMini.GUI
             cb_MaNCC.Items.Clear();
             foreach (var ncc in nhaCungCapList)
             {
-                cb_MaNCC.Items.Add(ncc["ma_ncc"]);
+                if (ncc.Contains("ma_ncc") && ncc.Contains("ten_ncc"))
+                {
+                    int maNcc = ncc["ma_ncc"].AsInt32;
+                    string tenNcc = ncc["ten_ncc"].AsString;
+                    string displayText = $"{maNcc} - {tenNcc}";
+                    cb_MaNCC.Items.Add(displayText);
+                }
+                else
+                {
+                    // Handle the case where the document does not have these fields.
+                    // For example, log a warning or skip this entry.
+                }
             }
         }
 
+
+
         private void LoadDataGrid()
         {
+            LoaiSanPhamBLL bll = new LoaiSanPhamBLL();
+
             List<LoaiSanPhamDTO> list = bll.GetList();
             grid_LoaiSanPham.DataSource = list;
 
@@ -50,6 +64,12 @@ namespace SieuThiMini.GUI
             grid_LoaiSanPham.Columns["MaLoai"].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
             grid_LoaiSanPham.Columns["TenLoai"].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
             grid_LoaiSanPham.Columns["MaNhaCungCap"].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            
+            textBox_TenLoaiSanPham.Enabled = false;
+            cb_MaNCC.Enabled = false;
+            btn_Save.Visible = false;
+            btn_Huy.Visible = false;
+            textBox_MaLSP.Enabled = false;
         }
 
         private void grid_LoaiSanPham_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -60,19 +80,27 @@ namespace SieuThiMini.GUI
             textBox_MaLSP.Text = row.Cells["MaLoai"].Value.ToString();
             textBox_TenLoaiSanPham.Text = row.Cells["TenLoai"].Value.ToString();
             cb_MaNCC.Text = row.Cells["MaNhaCungCap"].Value.ToString();
+            textBox_TenLoaiSanPham.Enabled = false;
+            cb_MaNCC.Enabled = false;
+            btn_Save.Visible = false;
+            btn_Huy.Visible = false;
+            textBox_MaLSP.Enabled = false;
+
         }
 
         private void btn_Save_Click(object sender, EventArgs e)
         {
+            LoaiSanPhamBLL bll = new LoaiSanPhamBLL();
+
             if (string.IsNullOrWhiteSpace(textBox_TenLoaiSanPham.Text) || string.IsNullOrWhiteSpace(cb_MaNCC.Text))
             {
                 MessageBox.Show("Vui lòng điền đầy đủ thông tin!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
-            int maLoai = int.Parse(textBox_MaLSP.Text);
+            int maLoai = Convert.ToInt32(textBox_MaLSP.Text);
             string tenLoai = textBox_TenLoaiSanPham.Text;
-            int maNCC = int.Parse(cb_MaNCC.Text);
+            int maNCC = Convert.ToInt32(cb_MaNCC.Text);
 
             LoaiSanPhamDTO lsp = new LoaiSanPhamDTO(maLoai, tenLoai, maNCC, 1);
             bll.Update(lsp);
@@ -99,17 +127,21 @@ namespace SieuThiMini.GUI
             textBox_TenLoaiSanPham.Enabled = true;
             cb_MaNCC.Enabled = true;
             btn_Save.Visible = true;
+            btn_Huy.Visible = true;
+            textBox_MaLSP.Enabled = true;
         }
 
         private void btn_XoaSP_Click(object sender, EventArgs e)
         {
+            LoaiSanPhamBLL bll = new LoaiSanPhamBLL();
+
             if (string.IsNullOrWhiteSpace(textBox_MaLSP.Text))
             {
                 MessageBox.Show("Vui lòng chọn loại sản phẩm cần xóa!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
-            string maLoai = textBox_MaLSP.Text;
+            int maLoai = Convert.ToInt32(textBox_MaLSP.Text);
             bll.Delete(maLoai);
 
             MessageBox.Show("Xóa thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -123,6 +155,8 @@ namespace SieuThiMini.GUI
 
         private void textBox_TimSanPham_TextChanged(object sender, EventArgs e)
         {
+            LoaiSanPhamBLL bll = new LoaiSanPhamBLL();
+
             string timKiem = textBox_TimSanPham.Text;
             List<LoaiSanPhamDTO> list = bll.TimKiem(timKiem);
             grid_LoaiSanPham.DataSource = list;
@@ -139,6 +173,11 @@ namespace SieuThiMini.GUI
         {
             KhoiPhucLoaiSanPham kp = new KhoiPhucLoaiSanPham();
             kp.ShowDialog();
+        }
+
+        private void cb_MaNCC_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

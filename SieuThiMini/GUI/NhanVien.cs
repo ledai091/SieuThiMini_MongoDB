@@ -27,7 +27,7 @@ namespace SieuThiMini.GUI
         private void LoadComboBoxTaiKhoan()
         {
             var collection = DataProvider.Instance.GetCollection("tai_khoan");
-            var taiKhoanList = collection.Find(Builders<BsonDocument>.Filter.Eq("trang_thai", "1")).ToList();
+            var taiKhoanList = collection.Find(Builders<BsonDocument>.Filter.Eq("trang_thai", 1)).ToList();
 
             cb_TK.Items.Clear();
             foreach (var tk in taiKhoanList)
@@ -88,7 +88,7 @@ namespace SieuThiMini.GUI
             textBox_SDT.Enabled = isEnabled;
             textBox_Email.Enabled = isEnabled;
             cb_TK.Enabled = isEnabled;
-
+            textBox_MaNV.Enabled = isEnabled;
             btn_Huy.Visible = isEnabled;
             btn_Save.Visible = isEnabled;
         }
@@ -165,16 +165,16 @@ namespace SieuThiMini.GUI
                 return;
             }
 
-            int maNV = int.Parse(textBox_MaNV.Text);
-            if (cb_TK.Text == "0")
+            int maNV = Convert.ToInt32(textBox_MaNV.Text);
+            try 
             {
-                nvBLL.Delete(maNV.ToString());
+                nvBLL.Delete(maNV);
                 MessageBox.Show("Xóa nhân viên thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 LoadDataGrid();
             }
-            else
+            catch
             {
-                MessageBox.Show("Nhân viên đang còn tài khoản sử dụng. Hãy chuyển tài khoản về mã '0' trước khi xóa!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Lỗi khi xóa", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -195,8 +195,9 @@ namespace SieuThiMini.GUI
         }
         private void btn_KhoiPhuc_Click(object sender, EventArgs e)
         {
-            KhoiPhucLoaiSanPham kplsp = new KhoiPhucLoaiSanPham();
-            kplsp.ShowDialog();
+            KhoiPhucNhanVien kpnv = new KhoiPhucNhanVien();
+            kpnv.ShowDialog();
+            LoadDataGrid();
         }
     }
 }

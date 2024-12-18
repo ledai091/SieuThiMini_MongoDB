@@ -11,7 +11,7 @@ namespace SieuThiMini.GUI
 {
     public partial class SanPham : Form
     {
-        private readonly SanPhamBLL spBLL = new SanPhamBLL();
+        //private readonly SanPhamBLL spBLL = new SanPhamBLL();
 
         public SanPham()
         {
@@ -38,6 +38,7 @@ namespace SieuThiMini.GUI
 
         private void LoadDataGrid()
         {
+            SanPhamBLL spBLL = new SanPhamBLL();
             var listSP = spBLL.GetList();
             grid_SanPham.DataSource = listSP;
 
@@ -113,6 +114,7 @@ namespace SieuThiMini.GUI
 
         private void btn_Save_Click(object sender, EventArgs e)
         {
+            SanPhamBLL spBLL = new SanPhamBLL();
             if (ValidateInputs())
             {
                 int maSP = int.Parse(textBox_MaSP.Text);
@@ -160,6 +162,7 @@ namespace SieuThiMini.GUI
 
         private void btn_XoaSP_Click(object sender, EventArgs e)
         {
+            SanPhamBLL spBLL = new SanPhamBLL();
             if (string.IsNullOrWhiteSpace(textBox_MaSP.Text))
             {
                 MessageBox.Show("Vui lòng chọn sản phẩm cần xóa!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -183,6 +186,7 @@ namespace SieuThiMini.GUI
 
         private void textBox_TimSanPham_TextChanged(object sender, EventArgs e)
         {
+            SanPhamBLL spBLL = new SanPhamBLL();
             string keyword = textBox_TimSanPham.Text.ToLower();
             var listSP = spBLL.TimKiem(keyword);
             grid_SanPham.DataSource = listSP;

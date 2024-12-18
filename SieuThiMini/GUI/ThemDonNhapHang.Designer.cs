@@ -58,10 +58,10 @@
             // 
             this.label_TT.AutoSize = true;
             this.label_TT.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_TT.Location = new System.Drawing.Point(19, 50);
-            this.label_TT.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.label_TT.Location = new System.Drawing.Point(14, 40);
+            this.label_TT.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label_TT.Name = "label_TT";
-            this.label_TT.Size = new System.Drawing.Size(57, 63);
+            this.label_TT.Size = new System.Drawing.Size(42, 46);
             this.label_TT.TabIndex = 0;
             this.label_TT.Text = "0";
             // 
@@ -72,9 +72,10 @@
             this.btn_ThanhToan.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_ThanhToan.ForeColor = System.Drawing.Color.White;
             this.btn_ThanhToan.Image = global::SieuThiMini.Properties.Resources.thanhToan__2_;
-            this.btn_ThanhToan.Location = new System.Drawing.Point(879, 187);
+            this.btn_ThanhToan.Location = new System.Drawing.Point(525, 150);
+            this.btn_ThanhToan.Margin = new System.Windows.Forms.Padding(2);
             this.btn_ThanhToan.Name = "btn_ThanhToan";
-            this.btn_ThanhToan.Size = new System.Drawing.Size(261, 81);
+            this.btn_ThanhToan.Size = new System.Drawing.Size(330, 65);
             this.btn_ThanhToan.TabIndex = 0;
             this.btn_ThanhToan.Text = "Thanh toán";
             this.btn_ThanhToan.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -87,9 +88,10 @@
             this.panel3.BackColor = System.Drawing.Color.LightSkyBlue;
             this.panel3.Controls.Add(this.btn_ThanhToan);
             this.panel3.Controls.Add(this.groupBox4);
-            this.panel3.Location = new System.Drawing.Point(883, 912);
+            this.panel3.Location = new System.Drawing.Point(662, 730);
+            this.panel3.Margin = new System.Windows.Forms.Padding(2);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1183, 284);
+            this.panel3.Size = new System.Drawing.Size(887, 227);
             this.panel3.TabIndex = 7;
             // 
             // groupBox4
@@ -97,9 +99,11 @@
             this.groupBox4.BackColor = System.Drawing.Color.White;
             this.groupBox4.Controls.Add(this.label_TT);
             this.groupBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox4.Location = new System.Drawing.Point(56, 24);
+            this.groupBox4.Location = new System.Drawing.Point(42, 19);
+            this.groupBox4.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(1084, 144);
+            this.groupBox4.Padding = new System.Windows.Forms.Padding(2);
+            this.groupBox4.Size = new System.Drawing.Size(813, 115);
             this.groupBox4.TabIndex = 0;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Tổng tiền cần thanh toán";
@@ -108,19 +112,21 @@
             // 
             this.grid_SanPham.BackgroundColor = System.Drawing.Color.Azure;
             this.grid_SanPham.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.grid_SanPham.Location = new System.Drawing.Point(883, 298);
+            this.grid_SanPham.Location = new System.Drawing.Point(662, 238);
+            this.grid_SanPham.Margin = new System.Windows.Forms.Padding(2);
             this.grid_SanPham.Name = "grid_SanPham";
             this.grid_SanPham.RowHeadersWidth = 82;
             this.grid_SanPham.RowTemplate.Height = 33;
-            this.grid_SanPham.Size = new System.Drawing.Size(1184, 586);
+            this.grid_SanPham.Size = new System.Drawing.Size(888, 469);
             this.grid_SanPham.TabIndex = 6;
             // 
             // cbo_NCC
             // 
             this.cbo_NCC.FormattingEnabled = true;
-            this.cbo_NCC.Location = new System.Drawing.Point(6, 39);
+            this.cbo_NCC.Location = new System.Drawing.Point(4, 31);
+            this.cbo_NCC.Margin = new System.Windows.Forms.Padding(2);
             this.cbo_NCC.Name = "cbo_NCC";
-            this.cbo_NCC.Size = new System.Drawing.Size(836, 41);
+            this.cbo_NCC.Size = new System.Drawing.Size(628, 34);
             this.cbo_NCC.TabIndex = 0;
             this.cbo_NCC.SelectedIndexChanged += new System.EventHandler(this.cbo_NCC_SelectedIndexChanged);
             // 
@@ -131,9 +137,10 @@
             this.btn_Xoa.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Xoa.ForeColor = System.Drawing.Color.White;
             this.btn_Xoa.Image = global::SieuThiMini.Properties.Resources.xoa;
-            this.btn_Xoa.Location = new System.Drawing.Point(700, 158);
+            this.btn_Xoa.Location = new System.Drawing.Point(525, 126);
+            this.btn_Xoa.Margin = new System.Windows.Forms.Padding(2);
             this.btn_Xoa.Name = "btn_Xoa";
-            this.btn_Xoa.Size = new System.Drawing.Size(204, 86);
+            this.btn_Xoa.Size = new System.Drawing.Size(153, 69);
             this.btn_Xoa.TabIndex = 2;
             this.btn_Xoa.Text = "Xoá";
             this.btn_Xoa.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -148,9 +155,10 @@
             this.btn_Them.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Them.ForeColor = System.Drawing.Color.White;
             this.btn_Them.Image = global::SieuThiMini.Properties.Resources.them;
-            this.btn_Them.Location = new System.Drawing.Point(470, 158);
+            this.btn_Them.Location = new System.Drawing.Point(352, 126);
+            this.btn_Them.Margin = new System.Windows.Forms.Padding(2);
             this.btn_Them.Name = "btn_Them";
-            this.btn_Them.Size = new System.Drawing.Size(204, 86);
+            this.btn_Them.Size = new System.Drawing.Size(153, 69);
             this.btn_Them.TabIndex = 1;
             this.btn_Them.Text = "Thêm";
             this.btn_Them.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -162,27 +170,32 @@
             // 
             this.groupBox1.Controls.Add(this.cbo_NCC);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(56, 28);
+            this.groupBox1.Location = new System.Drawing.Point(42, 22);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(848, 86);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
+            this.groupBox1.Size = new System.Drawing.Size(636, 69);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Nhà cung cấp";
             // 
             // ud_SoLuong
             // 
-            this.ud_SoLuong.Location = new System.Drawing.Point(6, 39);
+            this.ud_SoLuong.Location = new System.Drawing.Point(4, 31);
+            this.ud_SoLuong.Margin = new System.Windows.Forms.Padding(2);
             this.ud_SoLuong.Name = "ud_SoLuong";
-            this.ud_SoLuong.Size = new System.Drawing.Size(196, 41);
+            this.ud_SoLuong.Size = new System.Drawing.Size(147, 32);
             this.ud_SoLuong.TabIndex = 2;
             // 
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.ud_SoLuong);
             this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox2.Location = new System.Drawing.Point(932, 28);
+            this.groupBox2.Location = new System.Drawing.Point(699, 22);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(208, 86);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(2);
+            this.groupBox2.Size = new System.Drawing.Size(156, 69);
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Số lượng";
@@ -194,9 +207,10 @@
             this.panel2.Controls.Add(this.btn_Xoa);
             this.panel2.Controls.Add(this.btn_Them);
             this.panel2.Controls.Add(this.groupBox1);
-            this.panel2.Location = new System.Drawing.Point(883, 12);
+            this.panel2.Location = new System.Drawing.Point(662, 10);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1184, 268);
+            this.panel2.Size = new System.Drawing.Size(888, 214);
             this.panel2.TabIndex = 5;
             // 
             // labelDonHang
@@ -204,9 +218,10 @@
             this.labelDonHang.AutoSize = true;
             this.labelDonHang.Font = new System.Drawing.Font("Microsoft Sans Serif", 22F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelDonHang.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.labelDonHang.Location = new System.Drawing.Point(13, 28);
+            this.labelDonHang.Location = new System.Drawing.Point(10, 22);
+            this.labelDonHang.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelDonHang.Name = "labelDonHang";
-            this.labelDonHang.Size = new System.Drawing.Size(434, 67);
+            this.labelDonHang.Size = new System.Drawing.Size(319, 52);
             this.labelDonHang.TabIndex = 1;
             this.labelDonHang.Text = "Đơn nhập hàng";
             this.labelDonHang.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -216,11 +231,12 @@
             this.grid_DonNhapHang.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.grid_DonNhapHang.BackgroundColor = System.Drawing.Color.Azure;
             this.grid_DonNhapHang.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.grid_DonNhapHang.Location = new System.Drawing.Point(14, 98);
+            this.grid_DonNhapHang.Location = new System.Drawing.Point(10, 78);
+            this.grid_DonNhapHang.Margin = new System.Windows.Forms.Padding(2);
             this.grid_DonNhapHang.Name = "grid_DonNhapHang";
             this.grid_DonNhapHang.RowHeadersWidth = 82;
             this.grid_DonNhapHang.RowTemplate.Height = 33;
-            this.grid_DonNhapHang.Size = new System.Drawing.Size(776, 1070);
+            this.grid_DonNhapHang.Size = new System.Drawing.Size(582, 856);
             this.grid_DonNhapHang.TabIndex = 0;
             this.grid_DonNhapHang.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.grid_DonNhapHang_CellValueChanged);
             // 
@@ -229,21 +245,23 @@
             this.panel1.BackColor = System.Drawing.Color.LightSkyBlue;
             this.panel1.Controls.Add(this.labelDonHang);
             this.panel1.Controls.Add(this.grid_DonNhapHang);
-            this.panel1.Location = new System.Drawing.Point(15, 12);
+            this.panel1.Location = new System.Drawing.Point(11, 10);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(817, 1185);
+            this.panel1.Size = new System.Drawing.Size(613, 948);
             this.panel1.TabIndex = 4;
             // 
             // ThemDonNhapHang
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DodgerBlue;
-            this.ClientSize = new System.Drawing.Size(2082, 1209);
+            this.ClientSize = new System.Drawing.Size(1581, 962);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.grid_SanPham);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "ThemDonNhapHang";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "ThemDonNhapHang";

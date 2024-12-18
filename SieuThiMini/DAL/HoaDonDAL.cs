@@ -26,7 +26,7 @@ namespace SieuThiMini.DAL
 
         public List<HoaDonDTO> SelectAllDeleted()
         {
-            var filter = Builders<BsonDocument>.Filter.Eq("trang_thai", "0");
+            var filter = Builders<BsonDocument>.Filter.Eq("trang_thai", 0);
             var documents = _collection.Find(filter).ToList();
             return MapToDTOList(documents);
         }
@@ -35,31 +35,35 @@ namespace SieuThiMini.DAL
         {
             var document = new BsonDocument
             {
+                
                 { "ngay_xuat", target.NgayXuat },
+                { "ma_hoa_don", target.MaHoaDon },
                 { "ma_nhan_vien", target.MaNhanVien },
                 { "tong_tien", target.TongTien },
-                { "trang_thai", "1" }
+                { "trang_thai", 1 }
             };
             _collection.InsertOne(document);
         }
 
-        public void Delete(string id)
+        public void Delete(int id)
         {
-            var filter = Builders<BsonDocument>.Filter.Eq("_id", new ObjectId(id));
-            var update = Builders<BsonDocument>.Update.Set("trang_thai", "0");
+            var filter = Builders<BsonDocument>.Filter.Eq("ma_hoa_don", id);
+
+            var update = Builders<BsonDocument>.Update.Set("trang_thai", 0);
             _collection.UpdateOne(filter, update);
         }
 
-        public void Restore(string id)
+        public void Restore(int id)
         {
-            var filter = Builders<BsonDocument>.Filter.Eq("_id", new ObjectId(id));
-            var update = Builders<BsonDocument>.Update.Set("trang_thai", "1");
+            var filter = Builders<BsonDocument>.Filter.Eq("ma_hoa_don", id);
+
+            var update = Builders<BsonDocument>.Update.Set("trang_thai", 1);
             _collection.UpdateOne(filter, update);
         }
 
-        public List<HoaDonDTO> GetHDByMaHD(string id)
+        public List<HoaDonDTO> GetHDByMaHD(int id)
         {
-            var filter = Builders<BsonDocument>.Filter.Eq("_id", new ObjectId(id));
+            var filter = Builders<BsonDocument>.Filter.Eq("ma_hoa_don", id);
             var documents = _collection.Find(filter).ToList();
             return MapToDTOList(documents);
         }

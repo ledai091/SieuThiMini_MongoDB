@@ -67,11 +67,7 @@ namespace SieuThiMini.GUI
         }
         private void btn_Reload_Click(object sender, EventArgs e)
         {
-            DonNhapHangBLL bll = new DonNhapHangBLL();
-            List<DonNhapHangDTO> ds = bll.GetList();
-            grid_DSDonNhapHang.DataSource = ds;
-            text_DateStart.Text = "";
-            text_DateEnd.Text = "";
+            DonNhapHang_Load(null, null);
         }
 
         private void btn_ViewDetails_Click(object sender, EventArgs e)
@@ -80,7 +76,7 @@ namespace SieuThiMini.GUI
             {
                 int selectedRowIndex = grid_DSDonNhapHang.SelectedCells[0].RowIndex;
                 DataGridViewRow selectedRow = grid_DSDonNhapHang.Rows[selectedRowIndex];
-                string maDonNhap = Convert.ToString(selectedRow.Cells["ma_don_nh"].Value);
+                int maDonNhap = Convert.ToInt32(selectedRow.Cells["MaDonNhapHang"].Value);
                 CTDonNhapHang ct = new CTDonNhapHang(maDonNhap);
                 ct.ShowDialog();
             }
@@ -209,7 +205,7 @@ namespace SieuThiMini.GUI
             {
                 int selectedRowIndex = grid_DSDonNhapHang.SelectedCells[0].RowIndex;
                 DataGridViewRow selectedRow = grid_DSDonNhapHang.Rows[selectedRowIndex];
-                string maDonNhap = Convert.ToString(selectedRow.Cells["ma_don_nh"].Value);
+                int maDonNhap = Convert.ToInt32(selectedRow.Cells["MaDonNhapHang"].Value);
                 DonNhapHangBLL bll = new DonNhapHangBLL();
                 bll.Delete(maDonNhap);
                 MessageBox.Show("Xóa thành công");

@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Windows.Forms;
 using SieuThiMini.BLL;
 using SieuThiMini.DTO;
@@ -7,7 +8,6 @@ namespace SieuThiMini.GUI
 {
     public partial class ThemNhaCungCap : Form
     {
-        private readonly NhaCungCapBLL nccBLL = new NhaCungCapBLL();
 
         public ThemNhaCungCap()
         {
@@ -21,6 +21,8 @@ namespace SieuThiMini.GUI
 
         private void btn_ThemNCC_Click(object sender, EventArgs e)
         {
+            NhaCungCapBLL nccBLL = new NhaCungCapBLL();
+            List<NhaCungCapDTO> listDTO = nccBLL.SelectAll();
             string tenNCC = textBox_NCC.Text.Trim();
             string diaChi = textBox_DiaChi.Text.Trim();
             int trangThai = 1; // Mặc định trạng thái là '1' (hoạt động)
@@ -34,7 +36,7 @@ namespace SieuThiMini.GUI
             // Tạo đối tượng nhà cung cấp mới
             var ncc = new NhaCungCapDTO
             {
-                MaNhaCungCap = 0, // Mã nhà cung cấp được tự động sinh trong MongoDB
+                MaNhaCungCap = listDTO.Count + 1, // Mã nhà cung cấp được tự động sinh trong MongoDB
                 TenNhaCungCap = tenNCC,
                 DiaChi = diaChi,
                 TrangThai = trangThai
